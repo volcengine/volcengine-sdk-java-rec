@@ -1,8 +1,8 @@
 package volcengine.byteair;
 
+import volcengine.byteair.protocol.VolcengineByteair.*;
 import volcengine.common.CommonClientImpl;
 import volcengine.core.*;
-import volcengine.byteair.protocol.VolcengineByteair.*;
 import com.google.protobuf.Parser;
 import lombok.extern.slf4j.Slf4j;
 
@@ -34,7 +34,7 @@ public class ByteairClientImpl extends CommonClientImpl implements ByteairClient
 
     @Override
     public WriteResponse writeData(List<Map<String, Object>> dataList, String topic,
-                                   Option... opts) throws NetException, BizException {
+                                                     Option... opts) throws NetException, BizException {
         if (Objects.nonNull(dataList) && dataList.size() > MAX_IMPORT_ITEM_COUNT) {
             throw new BizException(ERR_MSG_TOO_MANY_ITEMS);
         }
@@ -42,7 +42,7 @@ public class ByteairClientImpl extends CommonClientImpl implements ByteairClient
         String urlFormat = byteairURL.getWriteDataUrlFormat();
         String url = urlFormat.replace("{}", topic);
         WriteResponse response = httpCaller.doJSONRequest(url, dataList, parser, Option.conv2Options(opts));
-        log.debug("[ByteplusSDK][WriteData] rsp:\n{}", response);
+        log.debug("[volcengineSDK][WriteData] rsp:\n{}", response);
         return response;
     }
 
@@ -54,7 +54,7 @@ public class ByteairClientImpl extends CommonClientImpl implements ByteairClient
         String url = byteairURL.getPredictUrlFormat().replace("{}", scene);
         Parser<PredictResponse> parser = PredictResponse.parser();
         PredictResponse response = httpCaller.doPBRequest(url, request, parser, options);
-        log.debug("[ByteplusSDK][Predict] rsp:\n{}", response);
+        log.debug("[volcengineSDK][Predict] rsp:\n{}", response);
         return response;
     }
 
@@ -71,7 +71,7 @@ public class ByteairClientImpl extends CommonClientImpl implements ByteairClient
         Parser<CallbackResponse> parser = CallbackResponse.parser();
         String url = byteairURL.getCallbackUrl();
         CallbackResponse response = httpCaller.doPBRequest(url, request, parser, Option.conv2Options(opts));
-        log.debug("[ByteplusSDK][Callback] rsp:\n{}", response);
+        log.debug("[volcengineSDK][Callback] rsp:\n{}", response);
         return response;
     }
 }

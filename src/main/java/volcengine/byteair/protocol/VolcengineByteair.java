@@ -40884,18 +40884,18 @@ public final class VolcengineByteair {
       "\001 \003(\003\"\034\n\nFloatArray\022\016\n\006values\030\001 \003(\002\"\035\n\013D" +
       "oubleArray\022\016\n\006values\030\001 \003(\001*C\n\017CallbackRe" +
       "qType\022\016\n\nbyte_scene\020\000\022\022\n\016not_byte_scene\020" +
-      "\001\022\014\n\010behavior\020\0022\217\003\n\026ByteplusGeneralServi" +
-      "ce\022N\n\tWriteData\022\024.google.protobuf.Any\032+." +
-      "bytedance.volcengine.byteair.WriteRespon" +
-      "se\022R\n\nImportData\022\024.google.protobuf.Any\032." +
-      ".bytedance.volcengine.common.OperationRe" +
-      "sponse\022f\n\007Predict\022,.bytedance.volcengine" +
-      ".byteair.PredictRequest\032-.bytedance.volc" +
-      "engine.byteair.PredictResponse\022i\n\010Callba" +
-      "ck\022-.bytedance.volcengine.byteair.Callba" +
-      "ckRequest\032..bytedance.volcengine.byteair" +
-      ".CallbackResponseB\035\n\033volcengine.byteair." +
-      "protocolb\006proto3"
+      "\001\022\014\n\010behavior\020\0022\221\003\n\030VolcengineGeneralSer" +
+      "vice\022N\n\tWriteData\022\024.google.protobuf.Any\032" +
+      "+.bytedance.volcengine.byteair.WriteResp" +
+      "onse\022R\n\nImportData\022\024.google.protobuf.Any" +
+      "\032..bytedance.volcengine.common.Operation" +
+      "Response\022f\n\007Predict\022,.bytedance.volcengi" +
+      "ne.byteair.PredictRequest\032-.bytedance.vo" +
+      "lcengine.byteair.PredictResponse\022i\n\010Call" +
+      "back\022-.bytedance.volcengine.byteair.Call" +
+      "backRequest\032..bytedance.volcengine.bytea" +
+      "ir.CallbackResponseB\035\n\033volcengine.byteai" +
+      "r.protocolb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

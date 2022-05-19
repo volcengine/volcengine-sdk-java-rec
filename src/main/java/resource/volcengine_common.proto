@@ -188,7 +188,7 @@ message ListOperationsResponse {
   string next_page_token = 3;
 }
 
-service ByteplusCommonService {
+service VolcengineCommonService {
   // GetOperation
   //
   // Gets the operation of a previous long running call.

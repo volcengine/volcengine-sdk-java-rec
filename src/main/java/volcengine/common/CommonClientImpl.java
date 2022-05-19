@@ -1,6 +1,5 @@
 package volcengine.common;
 
-import volcengine.common.protocol.VolcengineCommon.*;
 import volcengine.core.BizException;
 import volcengine.core.Context;
 import volcengine.core.HostAvailabler;
@@ -10,6 +9,7 @@ import volcengine.core.Option;
 import volcengine.core.URLCenter;
 import com.google.protobuf.Parser;
 import lombok.extern.slf4j.Slf4j;
+import volcengine.common.protocol.VolcengineCommon.*;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -56,7 +56,7 @@ public abstract class CommonClientImpl implements CommonClient, URLCenter {
         Parser<OperationResponse> parser = OperationResponse.parser();
         String url = commonURL.getGetOperationUrl();
         OperationResponse response = httpCaller.doPBRequest(url, request, parser, Option.conv2Options(opts));
-        log.debug("[ByteplusSDK][GetOperations] rsp:\n{}", response);
+        log.debug("[volcengineSDK][GetOperations] rsp:\n{}", response);
         return response;
     }
 
@@ -66,7 +66,7 @@ public abstract class CommonClientImpl implements CommonClient, URLCenter {
         Parser<ListOperationsResponse> parser = ListOperationsResponse.parser();
         String url = commonURL.getListOperationsUrl();
         ListOperationsResponse response = httpCaller.doPBRequest(url, request, parser, Option.conv2Options(opts));
-        log.debug("[ByteplusSDK][ListOperations] rsp:\n{}", response);
+        log.debug("[volcengineSDK][ListOperations] rsp:\n{}", response);
         return response;
     }
 
@@ -79,9 +79,9 @@ public abstract class CommonClientImpl implements CommonClient, URLCenter {
         String urlFormat = commonURL.getDoneUrlFormat();
         String url = urlFormat.replace("{}", topic);
         DoneRequest request = DoneRequest.newBuilder().addAllDataDates(dates).build();
-        Parser<DoneResponse> parser =  DoneResponse.parser();
+        Parser<DoneResponse> parser = DoneResponse.parser();
         DoneResponse response = httpCaller.doPBRequest(url, request, parser, Option.conv2Options(opts));
-        log.debug("[ByteplusSDK][Done] rsp:\n{}", response);
+        log.debug("[volcengineSDK][Done] rsp:\n{}", response);
         return response;
     }
 

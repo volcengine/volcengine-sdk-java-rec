@@ -16,8 +16,6 @@ public class MetricsExample {
                 MetricsOption.withMetricsLog(),
                 MetricsOption.withFlushIntervalMs(5 * 1000),
                 MetricsOption.withMetricsTimeout(1000), //metrics http request timeout
-//                MetricsOption.withMetricsDomain("rec-us-east-1.byteplusapi.com") //us metrics domain
-//                MetricsOption.withMetricsDomain("rec-ap-singapore-1.byteplusapi.com") //sg metrics domain
                 MetricsOption.withMetricsDomain("bot.snssdk.com") //cn metrics domain
         );
     }

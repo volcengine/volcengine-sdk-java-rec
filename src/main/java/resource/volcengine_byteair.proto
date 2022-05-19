@@ -517,8 +517,8 @@ message CallbackResponse {
   string message = 2;
 }
 
-// The Byteplus General service.
-service ByteplusGeneralService {
+// The volcengine General service.
+service VolcengineGeneralService {
   // Write
   //
   // Writes at most 100 data at a time. Exceeding 100 in a request results in
