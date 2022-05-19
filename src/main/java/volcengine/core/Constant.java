@@ -40,7 +40,7 @@ public final class Constant {
     public final static String VOLC_AUTH_SERVICE = "air";
 
 
-    // metric name for  byteplus sdk
+    // metric name for volcengineSDK sdk
     public static final String METRICS_KEY_INVOKE_SUCCESS = "invoke.success";
     public static final String METRICS_KEY_INVOKE_ERROR = "invoke.error";
 

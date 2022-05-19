@@ -82,7 +82,7 @@ public class HostAvailabler {
             doCheckHost();
             switchHost();
         } catch (Throwable e) {
-            log.error("[ByteplusSDK] ping find unexpected err, {}", e.getMessage());
+            log.error("[volcengineSDK] ping find unexpected err, {}", e.getMessage());
         }
     }
 
@@ -129,11 +129,11 @@ public class HostAvailabler {
             return httpRsp.code() == 200;
         } catch (Throwable e) {
             Helper.reportRequestException(METRICS_KEY_PING_ERROR, url, start, e);
-            log.warn("[ByteplusSDK] ping find err, host:{} err:{}", host, e.getMessage());
+            log.warn("[volcengineSDK] ping find err, host:{} err:{}", host, e.getMessage());
             return false;
         } finally {
             long cost = System.currentTimeMillis() - start;
-            log.debug("[ByteplusSDK] ping host:'{}' cost:'{}ms'", host, cost);
+            log.debug("[volcengineSDK] ping host:'{}' cost:'{}ms'", host, cost);
         }
     }
 
@@ -151,7 +151,7 @@ public class HostAvailabler {
             newHost = availableHosts.get(0);
         }
         if (!currentHost.equals(newHost)) {
-            log.warn("[ByteplusSDK] switch host to {}, origin is {}", newHost, currentHost);
+            log.warn("[volcengineSDK] switch host to {}, origin is {}", newHost, currentHost);
             currentHost = newHost;
             urlCenter.refresh(currentHost);
         }

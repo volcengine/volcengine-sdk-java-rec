@@ -1,10 +1,10 @@
 package volcengine.byteair;
 
+import volcengine.byteair.protocol.VolcengineByteair.*;
 import volcengine.common.CommonClient;
 import volcengine.core.BizException;
 import volcengine.core.NetException;
 import volcengine.core.Option;
-import volcengine.byteair.protocol.VolcengineByteair.*;
 
 import java.util.List;
 import java.util.Map;
@@ -26,8 +26,7 @@ public interface ByteairClient extends CommonClient {
     // The updated product data will take effect in 30 mins.
     // Depending how (realtime or batch) the UserEvents are sent back, it will
     // be fed into the models and take effect after that.
-    PredictResponse predict(PredictRequest request,
-                            Option... opts) throws NetException, BizException;
+    PredictResponse predict(PredictRequest request, Option... opts) throws NetException, BizException;
 
     // Callback
     //
@@ -44,7 +43,6 @@ public interface ByteairClient extends CommonClient {
     //   {id:4, extra: "{\"reason\": \"kept\"}", pos:4},
     //   {id:3, extra: "{\"reason\": \"filtered\"}", pos:0},
     // ].
-    CallbackResponse callback(CallbackRequest request,
-                              Option... opts) throws NetException, BizException;
+    CallbackResponse callback(CallbackRequest request, Option... opts) throws NetException, BizException;
 
 }

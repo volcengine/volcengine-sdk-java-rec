@@ -9874,16 +9874,16 @@ public final class VolcengineCommon {
       "2#.bytedance.volcengine.common.Status\022:\n" +
       "\noperations\030\002 \003(\0132&.bytedance.volcengine" +
       ".common.Operation\022\027\n\017next_page_token\030\003 \001" +
-      "(\t2\341\002\n\025ByteplusCommonService\022p\n\014GetOpera" +
-      "tion\0220.bytedance.volcengine.common.GetOp" +
-      "erationRequest\032..bytedance.volcengine.co" +
-      "mmon.OperationResponse\022y\n\016ListOperations" +
-      "\0222.bytedance.volcengine.common.ListOpera" +
-      "tionsRequest\0323.bytedance.volcengine.comm" +
-      "on.ListOperationsResponse\022[\n\004Done\022(.byte" +
-      "dance.volcengine.common.DoneRequest\032).by" +
-      "tedance.volcengine.common.DoneResponseB\034" +
-      "\n\032volcengine.common.protocolb\006proto3"
+      "(\t2\343\002\n\027VolcengineCommonService\022p\n\014GetOpe" +
+      "ration\0220.bytedance.volcengine.common.Get" +
+      "OperationRequest\032..bytedance.volcengine." +
+      "common.OperationResponse\022y\n\016ListOperatio" +
+      "ns\0222.bytedance.volcengine.common.ListOpe" +
+      "rationsRequest\0323.bytedance.volcengine.co" +
+      "mmon.ListOperationsResponse\022[\n\004Done\022(.by" +
+      "tedance.volcengine.common.DoneRequest\032)." +
+      "bytedance.volcengine.common.DoneResponse" +
+      "B\034\n\032volcengine.common.protocolb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

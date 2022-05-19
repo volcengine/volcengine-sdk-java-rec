@@ -232,10 +232,10 @@ public class MetricsCollector {
         try {
             MetricsRequest.send(request, url);
             if (isEnablePrintLog()) {
-                log.debug("[BytePlusSDK][Metrics] send metrics success, url:{}, metricsRequests:{}", url, metricsRequests);
+                log.debug("[volcengineSDK][Metrics] send metrics success, url:{}, metricsRequests:{}", url, metricsRequests);
             }
         } catch (BizException e) {
-            log.error("[BytePlusSDK][Metrics] send metrics exception, msg:{}, url:{}, metricsRequests:{}", e.getMessage(),
+            log.error("[volcengineSDK][Metrics] send metrics exception, msg:{}, url:{}, metricsRequests:{}", e.getMessage(),
                     url, metricsRequests);
         }
     }
