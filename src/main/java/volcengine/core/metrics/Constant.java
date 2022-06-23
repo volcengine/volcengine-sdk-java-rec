@@ -2,7 +2,7 @@ package volcengine.core.metrics;
 
 
 public class Constant {
-    // metrics default domain and prefix
+    // TODO 根据region自动选择DEFAULT_METRICS_DOMAIN
     public static final String DEFAULT_METRICS_DOMAIN = "byteair-api-cn1.snssdk.com";
     public static final String DEFAULT_METRICS_PREFIX = "voloengine.rec.sdk";
     public static final String DEFAULT_METRICS_HTTP_SCHEMA = "https";
