@@ -117,18 +117,6 @@ public class Context {
             this.hosts = param.hosts;
             return;
         }
-        if (param.region == Region.CN) {
-            hosts = Constant.CN_HOSTS;
-            return;
-        }
-        if (param.region == Region.US) {
-            hosts = Constant.US_HOSTS;
-            return;
-        }
-        if (param.region == Region.SG) {
-            hosts = Constant.SG_HOSTS;
-            return;
-        }
         if (param.region == Region.AIR_CN) {
             hosts = Constant.AIR_CN_HOSTS;
             return;
@@ -137,23 +125,16 @@ public class Context {
             hosts = Constant.AIR_SG_HOSTS;
             return;
         }
-        if (param.region == Region.SAAS_SG) {
-            hosts = Constant.SAAS_SG_HOSTS;
-        }
     }
 
     private void fillVolcCredential(Param param) {
         String region = "";
         switch (param.region) {
-            case SG:
             case AIR_SG:
                 region = "ap-singapore-1";
                 break;
-            case US:
-                region =  "us-east-1";
-                break;
             default: //Region "CN" and "AIR_CN" belong to "cn-north-1"
-                region =  "cn-north-1";
+                region = "cn-north-1";
         }
         this.volcCredential = new Credential(param.ak, param.sk, VOLC_AUTH_SERVICE, region);
     }
