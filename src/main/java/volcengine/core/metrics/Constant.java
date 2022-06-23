@@ -3,8 +3,8 @@ package volcengine.core.metrics;
 
 public class Constant {
     // metrics default domain and prefix
-    public static final String DEFAULT_METRICS_DOMAIN = "bot.snssdk.com";
-    public static final String DEFAULT_METRICS_PREFIX = "byteplus.rec.sdk";
+    public static final String DEFAULT_METRICS_DOMAIN = "byteair-api-cn1.snssdk.com";
+    public static final String DEFAULT_METRICS_PREFIX = "voloengine.rec.sdk";
     public static final String DEFAULT_METRICS_HTTP_SCHEMA = "https";
 
     public static final String COUNTER_URL_FORMAT = "%s://%s/api/counter";
