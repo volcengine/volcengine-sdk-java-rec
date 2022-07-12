@@ -28981,6 +28981,16 @@ public final class VolcengineByteair {
      */
     com.google.protobuf.ByteString
         getRequestIdBytes();
+
+    /**
+     * <pre>
+     * success mark
+     * </pre>
+     *
+     * <code>bool success = 5;</code>
+     * @return The success.
+     */
+    boolean getSuccess();
   }
   /**
    * Protobuf type {@code bytedance.volcengine.byteair.PredictResponse}
@@ -29057,6 +29067,11 @@ public final class VolcengineByteair {
               java.lang.String s = input.readStringRequireUtf8();
 
               requestId_ = s;
+              break;
+            }
+            case 40: {
+
+              success_ = input.readBool();
               break;
             }
             default: {
@@ -29248,6 +29263,21 @@ public final class VolcengineByteair {
       }
     }
 
+    public static final int SUCCESS_FIELD_NUMBER = 5;
+    private boolean success_;
+    /**
+     * <pre>
+     * success mark
+     * </pre>
+     *
+     * <code>bool success = 5;</code>
+     * @return The success.
+     */
+    @java.lang.Override
+    public boolean getSuccess() {
+      return success_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -29274,6 +29304,9 @@ public final class VolcengineByteair {
       if (!getRequestIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, requestId_);
       }
+      if (success_ != false) {
+        output.writeBool(5, success_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -29296,6 +29329,10 @@ public final class VolcengineByteair {
       }
       if (!getRequestIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, requestId_);
+      }
+      if (success_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(5, success_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -29323,6 +29360,8 @@ public final class VolcengineByteair {
       }
       if (!getRequestId()
           .equals(other.getRequestId())) return false;
+      if (getSuccess()
+          != other.getSuccess()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -29344,6 +29383,9 @@ public final class VolcengineByteair {
       }
       hash = (37 * hash) + REQUEST_ID_FIELD_NUMBER;
       hash = (53 * hash) + getRequestId().hashCode();
+      hash = (37 * hash) + SUCCESS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getSuccess());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -29489,6 +29531,8 @@ public final class VolcengineByteair {
         }
         requestId_ = "";
 
+        success_ = false;
+
         return this;
       }
 
@@ -29523,6 +29567,7 @@ public final class VolcengineByteair {
           result.value_ = valueBuilder_.build();
         }
         result.requestId_ = requestId_;
+        result.success_ = success_;
         onBuilt();
         return result;
       }
@@ -29584,6 +29629,9 @@ public final class VolcengineByteair {
         if (!other.getRequestId().isEmpty()) {
           requestId_ = other.requestId_;
           onChanged();
+        }
+        if (other.getSuccess() != false) {
+          setSuccess(other.getSuccess());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -30034,6 +30082,49 @@ public final class VolcengineByteair {
   checkByteStringIsUtf8(value);
         
         requestId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean success_ ;
+      /**
+       * <pre>
+       * success mark
+       * </pre>
+       *
+       * <code>bool success = 5;</code>
+       * @return The success.
+       */
+      @java.lang.Override
+      public boolean getSuccess() {
+        return success_;
+      }
+      /**
+       * <pre>
+       * success mark
+       * </pre>
+       *
+       * <code>bool success = 5;</code>
+       * @param value The success to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSuccess(boolean value) {
+        
+        success_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * success mark
+       * </pre>
+       *
+       * <code>bool success = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSuccess() {
+        
+        success_ = false;
         onChanged();
         return this;
       }
@@ -37242,6 +37333,16 @@ public final class VolcengineByteair {
      */
     com.google.protobuf.ByteString
         getMessageBytes();
+
+    /**
+     * <pre>
+     * success mark
+     * </pre>
+     *
+     * <code>bool success = 3;</code>
+     * @return The success.
+     */
+    boolean getSuccess();
   }
   /**
    * Protobuf type {@code bytedance.volcengine.byteair.CallbackResponse}
@@ -37298,6 +37399,11 @@ public final class VolcengineByteair {
               java.lang.String s = input.readStringRequireUtf8();
 
               message_ = s;
+              break;
+            }
+            case 24: {
+
+              success_ = input.readBool();
               break;
             }
             default: {
@@ -37399,6 +37505,21 @@ public final class VolcengineByteair {
       }
     }
 
+    public static final int SUCCESS_FIELD_NUMBER = 3;
+    private boolean success_;
+    /**
+     * <pre>
+     * success mark
+     * </pre>
+     *
+     * <code>bool success = 3;</code>
+     * @return The success.
+     */
+    @java.lang.Override
+    public boolean getSuccess() {
+      return success_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -37419,6 +37540,9 @@ public final class VolcengineByteair {
       if (!getMessageBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, message_);
       }
+      if (success_ != false) {
+        output.writeBool(3, success_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -37434,6 +37558,10 @@ public final class VolcengineByteair {
       }
       if (!getMessageBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, message_);
+      }
+      if (success_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, success_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -37454,6 +37582,8 @@ public final class VolcengineByteair {
           != other.getCode()) return false;
       if (!getMessage()
           .equals(other.getMessage())) return false;
+      if (getSuccess()
+          != other.getSuccess()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -37469,6 +37599,9 @@ public final class VolcengineByteair {
       hash = (53 * hash) + getCode();
       hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
       hash = (53 * hash) + getMessage().hashCode();
+      hash = (37 * hash) + SUCCESS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getSuccess());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -37606,6 +37739,8 @@ public final class VolcengineByteair {
 
         message_ = "";
 
+        success_ = false;
+
         return this;
       }
 
@@ -37634,6 +37769,7 @@ public final class VolcengineByteair {
         volcengine.byteair.protocol.VolcengineByteair.CallbackResponse result = new volcengine.byteair.protocol.VolcengineByteair.CallbackResponse(this);
         result.code_ = code_;
         result.message_ = message_;
+        result.success_ = success_;
         onBuilt();
         return result;
       }
@@ -37688,6 +37824,9 @@ public final class VolcengineByteair {
         if (!other.getMessage().isEmpty()) {
           message_ = other.message_;
           onChanged();
+        }
+        if (other.getSuccess() != false) {
+          setSuccess(other.getSuccess());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -37870,6 +38009,49 @@ public final class VolcengineByteair {
   checkByteStringIsUtf8(value);
         
         message_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean success_ ;
+      /**
+       * <pre>
+       * success mark
+       * </pre>
+       *
+       * <code>bool success = 3;</code>
+       * @return The success.
+       */
+      @java.lang.Override
+      public boolean getSuccess() {
+        return success_;
+      }
+      /**
+       * <pre>
+       * success mark
+       * </pre>
+       *
+       * <code>bool success = 3;</code>
+       * @param value The success to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSuccess(boolean value) {
+        
+        success_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * success mark
+       * </pre>
+       *
+       * <code>bool success = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSuccess() {
+        
+        success_ = false;
         onChanged();
         return this;
       }
@@ -40850,52 +41032,53 @@ public final class VolcengineByteair {
       "tFilterItem\022\n\n\002id\030\001 \001(\t\022I\n\005extra\030d \003(\0132:" +
       ".bytedance.volcengine.byteair.PredictFil" +
       "terItem.ExtraEntry\032,\n\nExtraEntry\022\013\n\003key\030" +
-      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\200\001\n\017PredictResp" +
+      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\221\001\n\017PredictResp" +
       "onse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022:\n\005v" +
       "alue\030\003 \001(\0132+.bytedance.volcengine.byteai" +
-      "r.PredictResult\022\022\n\nrequest_id\030\004 \001(\t\"\322\001\n\r" +
-      "PredictResult\0228\n\005items\030\001 \003(\0132).bytedance" +
-      ".volcengine.byteair.PredictItem\022E\n\005extra" +
-      "\030\002 \003(\01326.bytedance.volcengine.byteair.Pr" +
-      "edictResult.ExtraEntry\022\022\n\ntotalCount\030\003 \001" +
-      "(\005\032,\n\nExtraEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
-      " \001(\t:\0028\001\"\255\001\n\013PredictItem\022\n\n\002id\030\001 \001(\t\022\014\n\004" +
-      "rank\030\003 \001(\005\022\021\n\ttransData\030\004 \001(\t\022C\n\005extra\030\005" +
-      " \003(\01324.bytedance.volcengine.byteair.Pred" +
-      "ictItem.ExtraEntry\032,\n\nExtraEntry\022\013\n\003key\030" +
-      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\273\002\n\017CallbackReq" +
-      "uest\022\013\n\003uid\030\001 \001(\t\022\r\n\005scene\030\002 \001(\t\0229\n\005item" +
-      "s\030\003 \003(\0132*.bytedance.volcengine.byteair.C" +
-      "allbackItem\022\032\n\022predict_request_id\030\004 \001(\t\022" +
-      ">\n\007context\030\005 \001(\0132-.bytedance.volcengine." +
-      "byteair.CallbackContext\022G\n\005extra\030d \003(\01328" +
+      "r.PredictResult\022\022\n\nrequest_id\030\004 \001(\t\022\017\n\007s" +
+      "uccess\030\005 \001(\010\"\322\001\n\rPredictResult\0228\n\005items\030" +
+      "\001 \003(\0132).bytedance.volcengine.byteair.Pre" +
+      "dictItem\022E\n\005extra\030\002 \003(\01326.bytedance.volc" +
+      "engine.byteair.PredictResult.ExtraEntry\022" +
+      "\022\n\ntotalCount\030\003 \001(\005\032,\n\nExtraEntry\022\013\n\003key" +
+      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\255\001\n\013PredictIte" +
+      "m\022\n\n\002id\030\001 \001(\t\022\014\n\004rank\030\003 \001(\005\022\021\n\ttransData" +
+      "\030\004 \001(\t\022C\n\005extra\030\005 \003(\01324.bytedance.volcen" +
+      "gine.byteair.PredictItem.ExtraEntry\032,\n\nE" +
+      "xtraEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
+      "\001\"\273\002\n\017CallbackRequest\022\013\n\003uid\030\001 \001(\t\022\r\n\005sc" +
+      "ene\030\002 \001(\t\0229\n\005items\030\003 \003(\0132*.bytedance.vol" +
+      "cengine.byteair.CallbackItem\022\032\n\022predict_" +
+      "request_id\030\004 \001(\t\022>\n\007context\030\005 \001(\0132-.byte" +
+      "dance.volcengine.byteair.CallbackContext" +
+      "\022G\n\005extra\030d \003(\01328.bytedance.volcengine.b" +
+      "yteair.CallbackRequest.ExtraEntry\032,\n\nExt" +
+      "raEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"" +
+      "6\n\014CallbackItem\022\n\n\002id\030\001 \001(\t\022\013\n\003pos\030\002 \001(\t" +
+      "\022\r\n\005extra\030\003 \001(\t\"\326\001\n\017CallbackContext\022\013\n\003s" +
+      "pm\030\001 \001(\t\022?\n\010req_type\030\002 \001(\0162-.bytedance.v" +
+      "olcengine.byteair.CallbackReqType\022G\n\005ext" +
+      "ra\030d \003(\01328.bytedance.volcengine.byteair." +
+      "CallbackContext.ExtraEntry\032,\n\nExtraEntry" +
+      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"B\n\020Call" +
+      "backResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 " +
+      "\001(\t\022\017\n\007success\030\003 \001(\010\"\035\n\013StringArray\022\016\n\006v" +
+      "alues\030\001 \003(\t\"\032\n\010IntArray\022\016\n\006values\030\001 \003(\003\"" +
+      "\034\n\nFloatArray\022\016\n\006values\030\001 \003(\002\"\035\n\013DoubleA" +
+      "rray\022\016\n\006values\030\001 \003(\001*C\n\017CallbackReqType\022" +
+      "\016\n\nbyte_scene\020\000\022\022\n\016not_byte_scene\020\001\022\014\n\010b" +
+      "ehavior\020\0022\221\003\n\030VolcengineGeneralService\022N" +
+      "\n\tWriteData\022\024.google.protobuf.Any\032+.byte" +
+      "dance.volcengine.byteair.WriteResponse\022R" +
+      "\n\nImportData\022\024.google.protobuf.Any\032..byt" +
+      "edance.volcengine.common.OperationRespon" +
+      "se\022f\n\007Predict\022,.bytedance.volcengine.byt" +
+      "eair.PredictRequest\032-.bytedance.volcengi" +
+      "ne.byteair.PredictResponse\022i\n\010Callback\022-" +
       ".bytedance.volcengine.byteair.CallbackRe" +
-      "quest.ExtraEntry\032,\n\nExtraEntry\022\013\n\003key\030\001 " +
-      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"6\n\014CallbackItem\022\n" +
-      "\n\002id\030\001 \001(\t\022\013\n\003pos\030\002 \001(\t\022\r\n\005extra\030\003 \001(\t\"\326" +
-      "\001\n\017CallbackContext\022\013\n\003spm\030\001 \001(\t\022?\n\010req_t" +
-      "ype\030\002 \001(\0162-.bytedance.volcengine.byteair" +
-      ".CallbackReqType\022G\n\005extra\030d \003(\01328.byteda" +
-      "nce.volcengine.byteair.CallbackContext.E" +
-      "xtraEntry\032,\n\nExtraEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
-      "value\030\002 \001(\t:\0028\001\"1\n\020CallbackResponse\022\014\n\004c" +
-      "ode\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\"\035\n\013StringArra" +
-      "y\022\016\n\006values\030\001 \003(\t\"\032\n\010IntArray\022\016\n\006values\030" +
-      "\001 \003(\003\"\034\n\nFloatArray\022\016\n\006values\030\001 \003(\002\"\035\n\013D" +
-      "oubleArray\022\016\n\006values\030\001 \003(\001*C\n\017CallbackRe" +
-      "qType\022\016\n\nbyte_scene\020\000\022\022\n\016not_byte_scene\020" +
-      "\001\022\014\n\010behavior\020\0022\221\003\n\030VolcengineGeneralSer" +
-      "vice\022N\n\tWriteData\022\024.google.protobuf.Any\032" +
-      "+.bytedance.volcengine.byteair.WriteResp" +
-      "onse\022R\n\nImportData\022\024.google.protobuf.Any" +
-      "\032..bytedance.volcengine.common.Operation" +
-      "Response\022f\n\007Predict\022,.bytedance.volcengi" +
-      "ne.byteair.PredictRequest\032-.bytedance.vo" +
-      "lcengine.byteair.PredictResponse\022i\n\010Call" +
-      "back\022-.bytedance.volcengine.byteair.Call" +
-      "backRequest\032..bytedance.volcengine.bytea" +
-      "ir.CallbackResponseB\035\n\033volcengine.byteai" +
-      "r.protocolb\006proto3"
+      "quest\032..bytedance.volcengine.byteair.Cal" +
+      "lbackResponseB\035\n\033volcengine.byteair.prot" +
+      "ocolb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -41154,7 +41337,7 @@ public final class VolcengineByteair {
     internal_static_bytedance_volcengine_byteair_PredictResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bytedance_volcengine_byteair_PredictResponse_descriptor,
-        new java.lang.String[] { "Code", "Message", "Value", "RequestId", });
+        new java.lang.String[] { "Code", "Message", "Value", "RequestId", "Success", });
     internal_static_bytedance_volcengine_byteair_PredictResult_descriptor =
       getDescriptor().getMessageTypes().get(17);
     internal_static_bytedance_volcengine_byteair_PredictResult_fieldAccessorTable = new
@@ -41214,7 +41397,7 @@ public final class VolcengineByteair {
     internal_static_bytedance_volcengine_byteair_CallbackResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bytedance_volcengine_byteair_CallbackResponse_descriptor,
-        new java.lang.String[] { "Code", "Message", });
+        new java.lang.String[] { "Code", "Message", "Success", });
     internal_static_bytedance_volcengine_byteair_StringArray_descriptor =
       getDescriptor().getMessageTypes().get(23);
     internal_static_bytedance_volcengine_byteair_StringArray_fieldAccessorTable = new
