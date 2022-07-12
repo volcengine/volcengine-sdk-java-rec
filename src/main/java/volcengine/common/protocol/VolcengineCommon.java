@@ -56,6 +56,16 @@ public final class VolcengineCommon {
      */
     com.google.protobuf.ByteString
         getMessageBytes();
+
+    /**
+     * <pre>
+     * success mark
+     * </pre>
+     *
+     * <code>bool success = 3;</code>
+     * @return The success.
+     */
+    boolean getSuccess();
   }
   /**
    * <pre>
@@ -119,6 +129,11 @@ public final class VolcengineCommon {
               java.lang.String s = input.readStringRequireUtf8();
 
               message_ = s;
+              break;
+            }
+            case 24: {
+
+              success_ = input.readBool();
               break;
             }
             default: {
@@ -223,6 +238,21 @@ public final class VolcengineCommon {
       }
     }
 
+    public static final int SUCCESS_FIELD_NUMBER = 3;
+    private boolean success_;
+    /**
+     * <pre>
+     * success mark
+     * </pre>
+     *
+     * <code>bool success = 3;</code>
+     * @return The success.
+     */
+    @java.lang.Override
+    public boolean getSuccess() {
+      return success_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -243,6 +273,9 @@ public final class VolcengineCommon {
       if (!getMessageBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, message_);
       }
+      if (success_ != false) {
+        output.writeBool(3, success_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -258,6 +291,10 @@ public final class VolcengineCommon {
       }
       if (!getMessageBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, message_);
+      }
+      if (success_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, success_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -278,6 +315,8 @@ public final class VolcengineCommon {
           != other.getCode()) return false;
       if (!getMessage()
           .equals(other.getMessage())) return false;
+      if (getSuccess()
+          != other.getSuccess()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -293,6 +332,9 @@ public final class VolcengineCommon {
       hash = (53 * hash) + getCode();
       hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
       hash = (53 * hash) + getMessage().hashCode();
+      hash = (37 * hash) + SUCCESS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getSuccess());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -437,6 +479,8 @@ public final class VolcengineCommon {
 
         message_ = "";
 
+        success_ = false;
+
         return this;
       }
 
@@ -465,6 +509,7 @@ public final class VolcengineCommon {
         volcengine.common.protocol.VolcengineCommon.Status result = new volcengine.common.protocol.VolcengineCommon.Status(this);
         result.code_ = code_;
         result.message_ = message_;
+        result.success_ = success_;
         onBuilt();
         return result;
       }
@@ -519,6 +564,9 @@ public final class VolcengineCommon {
         if (!other.getMessage().isEmpty()) {
           message_ = other.message_;
           onChanged();
+        }
+        if (other.getSuccess() != false) {
+          setSuccess(other.getSuccess());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -711,6 +759,49 @@ public final class VolcengineCommon {
   checkByteStringIsUtf8(value);
         
         message_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean success_ ;
+      /**
+       * <pre>
+       * success mark
+       * </pre>
+       *
+       * <code>bool success = 3;</code>
+       * @return The success.
+       */
+      @java.lang.Override
+      public boolean getSuccess() {
+        return success_;
+      }
+      /**
+       * <pre>
+       * success mark
+       * </pre>
+       *
+       * <code>bool success = 3;</code>
+       * @param value The success to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSuccess(boolean value) {
+        
+        success_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * success mark
+       * </pre>
+       *
+       * <code>bool success = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSuccess() {
+        
+        success_ = false;
         onChanged();
         return this;
       }
@@ -9851,39 +9942,40 @@ public final class VolcengineCommon {
     java.lang.String[] descriptorData = {
       "\n\027volcengine_common.proto\022\033bytedance.vol" +
       "cengine.common\032\031google/protobuf/any.prot" +
-      "o\"\'\n\006Status\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001" +
-      "(\t\"0\n\004Date\022\014\n\004year\030\001 \001(\005\022\r\n\005month\030\002 \001(\005\022" +
-      "\013\n\003day\030\003 \001(\005\"D\n\013DoneRequest\0225\n\ndata_date" +
-      "s\030\001 \003(\0132!.bytedance.volcengine.common.Da" +
-      "te\"C\n\014DoneResponse\0223\n\006status\030\001 \001(\0132#.byt" +
-      "edance.volcengine.common.Status\"\205\001\n\010Meta" +
-      "data\022\014\n\004date\030\001 \001(\t\022\023\n\013total_count\030\002 \001(\003\022" +
-      "\025\n\rsuccess_count\030\003 \001(\003\022\025\n\rfailure_count\030" +
-      "\004 \001(\003\022\023\n\013submit_time\030\005 \001(\t\022\023\n\013update_tim" +
-      "e\030\006 \001(\t\"\210\001\n\tOperation\022\014\n\004name\030\001 \001(\t\0227\n\010m" +
-      "etadata\030\002 \001(\0132%.bytedance.volcengine.com" +
-      "mon.Metadata\022\014\n\004done\030\003 \001(\010\022&\n\010response\030\004" +
-      " \001(\0132\024.google.protobuf.Any\"\203\001\n\021Operation" +
-      "Response\0223\n\006status\030\001 \001(\0132#.bytedance.vol" +
-      "cengine.common.Status\0229\n\toperation\030\002 \001(\013" +
-      "2&.bytedance.volcengine.common.Operation" +
-      "\"#\n\023GetOperationRequest\022\014\n\004name\030\001 \001(\t\"N\n" +
-      "\025ListOperationsRequest\022\016\n\006filter\030\001 \001(\t\022\021" +
-      "\n\tpage_size\030\002 \001(\005\022\022\n\npage_token\030\003 \001(\t\"\242\001" +
-      "\n\026ListOperationsResponse\0223\n\006status\030\001 \001(\013" +
-      "2#.bytedance.volcengine.common.Status\022:\n" +
-      "\noperations\030\002 \003(\0132&.bytedance.volcengine" +
-      ".common.Operation\022\027\n\017next_page_token\030\003 \001" +
-      "(\t2\343\002\n\027VolcengineCommonService\022p\n\014GetOpe" +
-      "ration\0220.bytedance.volcengine.common.Get" +
-      "OperationRequest\032..bytedance.volcengine." +
-      "common.OperationResponse\022y\n\016ListOperatio" +
-      "ns\0222.bytedance.volcengine.common.ListOpe" +
-      "rationsRequest\0323.bytedance.volcengine.co" +
-      "mmon.ListOperationsResponse\022[\n\004Done\022(.by" +
-      "tedance.volcengine.common.DoneRequest\032)." +
-      "bytedance.volcengine.common.DoneResponse" +
-      "B\034\n\032volcengine.common.protocolb\006proto3"
+      "o\"8\n\006Status\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001" +
+      "(\t\022\017\n\007success\030\003 \001(\010\"0\n\004Date\022\014\n\004year\030\001 \001(" +
+      "\005\022\r\n\005month\030\002 \001(\005\022\013\n\003day\030\003 \001(\005\"D\n\013DoneReq" +
+      "uest\0225\n\ndata_dates\030\001 \003(\0132!.bytedance.vol" +
+      "cengine.common.Date\"C\n\014DoneResponse\0223\n\006s" +
+      "tatus\030\001 \001(\0132#.bytedance.volcengine.commo" +
+      "n.Status\"\205\001\n\010Metadata\022\014\n\004date\030\001 \001(\t\022\023\n\013t" +
+      "otal_count\030\002 \001(\003\022\025\n\rsuccess_count\030\003 \001(\003\022" +
+      "\025\n\rfailure_count\030\004 \001(\003\022\023\n\013submit_time\030\005 " +
+      "\001(\t\022\023\n\013update_time\030\006 \001(\t\"\210\001\n\tOperation\022\014" +
+      "\n\004name\030\001 \001(\t\0227\n\010metadata\030\002 \001(\0132%.bytedan" +
+      "ce.volcengine.common.Metadata\022\014\n\004done\030\003 " +
+      "\001(\010\022&\n\010response\030\004 \001(\0132\024.google.protobuf." +
+      "Any\"\203\001\n\021OperationResponse\0223\n\006status\030\001 \001(" +
+      "\0132#.bytedance.volcengine.common.Status\0229" +
+      "\n\toperation\030\002 \001(\0132&.bytedance.volcengine" +
+      ".common.Operation\"#\n\023GetOperationRequest" +
+      "\022\014\n\004name\030\001 \001(\t\"N\n\025ListOperationsRequest\022" +
+      "\016\n\006filter\030\001 \001(\t\022\021\n\tpage_size\030\002 \001(\005\022\022\n\npa" +
+      "ge_token\030\003 \001(\t\"\242\001\n\026ListOperationsRespons" +
+      "e\0223\n\006status\030\001 \001(\0132#.bytedance.volcengine" +
+      ".common.Status\022:\n\noperations\030\002 \003(\0132&.byt" +
+      "edance.volcengine.common.Operation\022\027\n\017ne" +
+      "xt_page_token\030\003 \001(\t2\343\002\n\027VolcengineCommon" +
+      "Service\022p\n\014GetOperation\0220.bytedance.volc" +
+      "engine.common.GetOperationRequest\032..byte" +
+      "dance.volcengine.common.OperationRespons" +
+      "e\022y\n\016ListOperations\0222.bytedance.volcengi" +
+      "ne.common.ListOperationsRequest\0323.byteda" +
+      "nce.volcengine.common.ListOperationsResp" +
+      "onse\022[\n\004Done\022(.bytedance.volcengine.comm" +
+      "on.DoneRequest\032).bytedance.volcengine.co" +
+      "mmon.DoneResponseB\034\n\032volcengine.common.p" +
+      "rotocolb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -9895,7 +9987,7 @@ public final class VolcengineCommon {
     internal_static_bytedance_volcengine_common_Status_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bytedance_volcengine_common_Status_descriptor,
-        new java.lang.String[] { "Code", "Message", });
+        new java.lang.String[] { "Code", "Message", "Success", });
     internal_static_bytedance_volcengine_common_Date_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_bytedance_volcengine_common_Date_fieldAccessorTable = new
