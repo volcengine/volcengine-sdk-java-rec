@@ -9,8 +9,8 @@
     <version>1.0.0</version>
 
     <properties>
-        <maven.compiler.source>15</maven.compiler.source>
-        <maven.compiler.target>15</maven.compiler.target>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
         <lombok.version>1.18.22</lombok.version>
         <okhttp.verison>4.9.3</okhttp.verison>
         <protobuf-java.version>3.19.1</protobuf-java.version>
