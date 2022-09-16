@@ -86,13 +86,13 @@ public class Context {
 
     private void checkRequiredField(Param param) {
         if (Objects.isNull(param.tenant)) {
-            throw new RuntimeException("Tenant is null");
+            throw new RuntimeException("application id is null");
         }
         if (Objects.isNull(param.tenantId)) {
-            throw new RuntimeException("Tenant id is null");
+            throw new RuntimeException("tenant id is null");
         }
         if (Objects.isNull(param.region)) {
-            throw new RuntimeException("Region is null");
+            throw new RuntimeException("region is null");
         }
         checkAuthRequiredField(param);
     }

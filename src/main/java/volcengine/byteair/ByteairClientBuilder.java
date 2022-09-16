@@ -13,8 +13,8 @@ public class ByteairClientBuilder {
         this.param = new Context.Param();
     }
 
-    public ByteairClientBuilder projectId(String projectId) {
-        this.param.setTenant(projectId);
+    public ByteairClientBuilder applicationId(String applicationId) {
+        this.param.setTenant(applicationId);
         return this;
     }
 
