@@ -249,8 +249,6 @@ public final class VolcengineByteair {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -382,10 +380,10 @@ public final class VolcengineByteair {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(message_)) {
+      if (!getMessageBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, message_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(data_)) {
+      if (!getDataBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, data_);
       }
       unknownFields.writeTo(output);
@@ -397,10 +395,10 @@ public final class VolcengineByteair {
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(message_)) {
+      if (!getMessageBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, message_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(data_)) {
+      if (!getDataBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, data_);
       }
       size += unknownFields.getSerializedSize();
@@ -1115,8 +1113,6 @@ public final class VolcengineByteair {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -2389,8 +2385,6 @@ public final class VolcengineByteair {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -3959,8 +3953,6 @@ public final class VolcengineByteair {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -7041,11 +7033,9 @@ public final class VolcengineByteair {
      * <code>map&lt;string, string&gt; extra = 100;</code>
      */
 
-    /* nullable */
-java.lang.String getExtraOrDefault(
+    java.lang.String getExtraOrDefault(
         java.lang.String key,
-        /* nullable */
-java.lang.String defaultValue);
+        java.lang.String defaultValue);
     /**
      * <pre>
      * Optional.
@@ -7205,8 +7195,6 @@ java.lang.String defaultValue);
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -7762,7 +7750,7 @@ java.lang.String defaultValue);
     @java.lang.Override
     public boolean containsExtra(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetExtra().getMap().containsKey(key);
     }
     /**
@@ -7801,7 +7789,7 @@ java.lang.String defaultValue);
     public java.lang.String getExtraOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetExtra().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -7819,7 +7807,7 @@ java.lang.String defaultValue);
 
     public java.lang.String getExtraOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetExtra().getMap();
       if (!map.containsKey(key)) {
@@ -7842,34 +7830,34 @@ java.lang.String defaultValue);
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uid_)) {
+      if (!getUidBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, uid_);
       }
       if (device_ != null) {
         output.writeMessage(2, getDevice());
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(age_)) {
+      if (!getAgeBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, age_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(gender_)) {
+      if (!getGenderBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, gender_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(province_)) {
+      if (!getProvinceBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, province_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(city_)) {
+      if (!getCityBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, city_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(district_)) {
+      if (!getDistrictBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, district_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(appMarket_)) {
+      if (!getAppMarketBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, appMarket_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loginMode_)) {
+      if (!getLoginModeBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, loginMode_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(country_)) {
+      if (!getCountryBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, country_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -7887,35 +7875,35 @@ java.lang.String defaultValue);
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uid_)) {
+      if (!getUidBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, uid_);
       }
       if (device_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getDevice());
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(age_)) {
+      if (!getAgeBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, age_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(gender_)) {
+      if (!getGenderBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, gender_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(province_)) {
+      if (!getProvinceBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, province_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(city_)) {
+      if (!getCityBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, city_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(district_)) {
+      if (!getDistrictBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, district_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(appMarket_)) {
+      if (!getAppMarketBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, appMarket_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loginMode_)) {
+      if (!getLoginModeBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, loginMode_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(country_)) {
+      if (!getCountryBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, country_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -9484,7 +9472,7 @@ java.lang.String defaultValue);
       @java.lang.Override
       public boolean containsExtra(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         return internalGetExtra().getMap().containsKey(key);
       }
       /**
@@ -9523,7 +9511,7 @@ java.lang.String defaultValue);
       public java.lang.String getExtraOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetExtra().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -9541,7 +9529,7 @@ java.lang.String defaultValue);
 
       public java.lang.String getExtraOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetExtra().getMap();
         if (!map.containsKey(key)) {
@@ -9567,7 +9555,7 @@ java.lang.String defaultValue);
 
       public Builder removeExtra(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableExtra().getMutableMap()
             .remove(key);
         return this;
@@ -9592,11 +9580,8 @@ java.lang.String defaultValue);
       public Builder putExtra(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableExtra().getMutableMap()
             .put(key, value);
         return this;
@@ -9885,26 +9870,6 @@ java.lang.String defaultValue);
      */
     com.google.protobuf.ByteString
         getCarrierBytes();
-
-    /**
-     * <pre>
-     * Optional.
-     * </pre>
-     *
-     * <code>string osType = 10;</code>
-     * @return The osType.
-     */
-    java.lang.String getOsType();
-    /**
-     * <pre>
-     * Optional.
-     * </pre>
-     *
-     * <code>string osType = 10;</code>
-     * @return The bytes for osType.
-     */
-    com.google.protobuf.ByteString
-        getOsTypeBytes();
   }
   /**
    * Protobuf type {@code bytedance.volcengine.byteair.PredictDevice}
@@ -9928,7 +9893,6 @@ java.lang.String defaultValue);
       osVersion_ = "";
       networkType_ = "";
       carrier_ = "";
-      osType_ = "";
     }
 
     @java.lang.Override
@@ -10015,12 +9979,6 @@ java.lang.String defaultValue);
               carrier_ = s;
               break;
             }
-            case 82: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              osType_ = s;
-              break;
-            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -10032,8 +9990,6 @@ java.lang.String defaultValue);
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -10501,52 +10457,6 @@ java.lang.String defaultValue);
       }
     }
 
-    public static final int OSTYPE_FIELD_NUMBER = 10;
-    private volatile java.lang.Object osType_;
-    /**
-     * <pre>
-     * Optional.
-     * </pre>
-     *
-     * <code>string osType = 10;</code>
-     * @return The osType.
-     */
-    @java.lang.Override
-    public java.lang.String getOsType() {
-      java.lang.Object ref = osType_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        osType_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * Optional.
-     * </pre>
-     *
-     * <code>string osType = 10;</code>
-     * @return The bytes for osType.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getOsTypeBytes() {
-      java.lang.Object ref = osType_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        osType_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -10561,35 +10471,32 @@ java.lang.String defaultValue);
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceId_)) {
+      if (!getDeviceIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, deviceId_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(platform_)) {
+      if (!getPlatformBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, platform_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceVendor_)) {
+      if (!getDeviceVendorBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, deviceVendor_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceModel_)) {
+      if (!getDeviceModelBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, deviceModel_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceResolution_)) {
+      if (!getDeviceResolutionBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, deviceResolution_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientVersion_)) {
+      if (!getClientVersionBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, clientVersion_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(osVersion_)) {
+      if (!getOsVersionBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, osVersion_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(networkType_)) {
+      if (!getNetworkTypeBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, networkType_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(carrier_)) {
+      if (!getCarrierBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, carrier_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(osType_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, osType_);
       }
       unknownFields.writeTo(output);
     }
@@ -10600,35 +10507,32 @@ java.lang.String defaultValue);
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceId_)) {
+      if (!getDeviceIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, deviceId_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(platform_)) {
+      if (!getPlatformBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, platform_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceVendor_)) {
+      if (!getDeviceVendorBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, deviceVendor_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceModel_)) {
+      if (!getDeviceModelBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, deviceModel_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceResolution_)) {
+      if (!getDeviceResolutionBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, deviceResolution_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientVersion_)) {
+      if (!getClientVersionBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, clientVersion_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(osVersion_)) {
+      if (!getOsVersionBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, osVersion_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(networkType_)) {
+      if (!getNetworkTypeBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, networkType_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(carrier_)) {
+      if (!getCarrierBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, carrier_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(osType_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, osType_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -10663,8 +10567,6 @@ java.lang.String defaultValue);
           .equals(other.getNetworkType())) return false;
       if (!getCarrier()
           .equals(other.getCarrier())) return false;
-      if (!getOsType()
-          .equals(other.getOsType())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -10694,8 +10596,6 @@ java.lang.String defaultValue);
       hash = (53 * hash) + getNetworkType().hashCode();
       hash = (37 * hash) + CARRIER_FIELD_NUMBER;
       hash = (53 * hash) + getCarrier().hashCode();
-      hash = (37 * hash) + OSTYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getOsType().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -10847,8 +10747,6 @@ java.lang.String defaultValue);
 
         carrier_ = "";
 
-        osType_ = "";
-
         return this;
       }
 
@@ -10884,7 +10782,6 @@ java.lang.String defaultValue);
         result.osVersion_ = osVersion_;
         result.networkType_ = networkType_;
         result.carrier_ = carrier_;
-        result.osType_ = osType_;
         onBuilt();
         return result;
       }
@@ -10967,10 +10864,6 @@ java.lang.String defaultValue);
         }
         if (!other.getCarrier().isEmpty()) {
           carrier_ = other.carrier_;
-          onChanged();
-        }
-        if (!other.getOsType().isEmpty()) {
-          osType_ = other.osType_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -11945,102 +11838,6 @@ java.lang.String defaultValue);
         onChanged();
         return this;
       }
-
-      private java.lang.Object osType_ = "";
-      /**
-       * <pre>
-       * Optional.
-       * </pre>
-       *
-       * <code>string osType = 10;</code>
-       * @return The osType.
-       */
-      public java.lang.String getOsType() {
-        java.lang.Object ref = osType_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          osType_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Optional.
-       * </pre>
-       *
-       * <code>string osType = 10;</code>
-       * @return The bytes for osType.
-       */
-      public com.google.protobuf.ByteString
-          getOsTypeBytes() {
-        java.lang.Object ref = osType_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          osType_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Optional.
-       * </pre>
-       *
-       * <code>string osType = 10;</code>
-       * @param value The osType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setOsType(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        osType_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Optional.
-       * </pre>
-       *
-       * <code>string osType = 10;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearOsType() {
-        
-        osType_ = getDefaultInstance().getOsType();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Optional.
-       * </pre>
-       *
-       * <code>string osType = 10;</code>
-       * @param value The bytes for osType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setOsTypeBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        osType_ = value;
-        onChanged();
-        return this;
-      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -12234,11 +12031,9 @@ java.lang.String defaultValue);
      * <code>map&lt;string, string&gt; extra = 100;</code>
      */
 
-    /* nullable */
-java.lang.String getExtraOrDefault(
+    java.lang.String getExtraOrDefault(
         java.lang.String key,
-        /* nullable */
-java.lang.String defaultValue);
+        java.lang.String defaultValue);
     /**
      * <pre>
      * Optional.
@@ -12360,8 +12155,6 @@ java.lang.String defaultValue);
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -12575,7 +12368,7 @@ java.lang.String defaultValue);
     @java.lang.Override
     public boolean containsExtra(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetExtra().getMap().containsKey(key);
     }
     /**
@@ -12614,7 +12407,7 @@ java.lang.String defaultValue);
     public java.lang.String getExtraOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetExtra().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -12632,7 +12425,7 @@ java.lang.String defaultValue);
 
     public java.lang.String getExtraOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetExtra().getMap();
       if (!map.containsKey(key)) {
@@ -12655,7 +12448,7 @@ java.lang.String defaultValue);
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(spm_)) {
+      if (!getSpmBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, spm_);
       }
       if (closePersonalizedRecommend_ != false) {
@@ -12682,7 +12475,7 @@ java.lang.String defaultValue);
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(spm_)) {
+      if (!getSpmBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, spm_);
       }
       if (closePersonalizedRecommend_ != false) {
@@ -13570,7 +13363,7 @@ java.lang.String defaultValue);
       @java.lang.Override
       public boolean containsExtra(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         return internalGetExtra().getMap().containsKey(key);
       }
       /**
@@ -13609,7 +13402,7 @@ java.lang.String defaultValue);
       public java.lang.String getExtraOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetExtra().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -13627,7 +13420,7 @@ java.lang.String defaultValue);
 
       public java.lang.String getExtraOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetExtra().getMap();
         if (!map.containsKey(key)) {
@@ -13653,7 +13446,7 @@ java.lang.String defaultValue);
 
       public Builder removeExtra(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableExtra().getMutableMap()
             .remove(key);
         return this;
@@ -13678,11 +13471,8 @@ java.lang.String defaultValue);
       public Builder putExtra(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableExtra().getMutableMap()
             .put(key, value);
         return this;
@@ -13800,11 +13590,9 @@ java.lang.String defaultValue);
      * <code>map&lt;string, string&gt; stringFeature = 1;</code>
      */
 
-    /* nullable */
-java.lang.String getStringFeatureOrDefault(
+    java.lang.String getStringFeatureOrDefault(
         java.lang.String key,
-        /* nullable */
-java.lang.String defaultValue);
+        java.lang.String defaultValue);
     /**
      * <pre>
      * string feature
@@ -14018,11 +13806,9 @@ java.lang.String defaultValue);
      * <code>map&lt;string, .bytedance.volcengine.byteair.StringArray&gt; stringArrayFeature = 5;</code>
      */
 
-    /* nullable */
-volcengine.byteair.protocol.VolcengineByteair.StringArray getStringArrayFeatureOrDefault(
+    volcengine.byteair.protocol.VolcengineByteair.StringArray getStringArrayFeatureOrDefault(
         java.lang.String key,
-        /* nullable */
-volcengine.byteair.protocol.VolcengineByteair.StringArray defaultValue);
+        volcengine.byteair.protocol.VolcengineByteair.StringArray defaultValue);
     /**
      * <pre>
      * string array feature
@@ -14074,11 +13860,9 @@ volcengine.byteair.protocol.VolcengineByteair.StringArray defaultValue);
      * <code>map&lt;string, .bytedance.volcengine.byteair.IntArray&gt; intArrayFeature = 6;</code>
      */
 
-    /* nullable */
-volcengine.byteair.protocol.VolcengineByteair.IntArray getIntArrayFeatureOrDefault(
+    volcengine.byteair.protocol.VolcengineByteair.IntArray getIntArrayFeatureOrDefault(
         java.lang.String key,
-        /* nullable */
-volcengine.byteair.protocol.VolcengineByteair.IntArray defaultValue);
+        volcengine.byteair.protocol.VolcengineByteair.IntArray defaultValue);
     /**
      * <pre>
      * int array feature
@@ -14130,11 +13914,9 @@ volcengine.byteair.protocol.VolcengineByteair.IntArray defaultValue);
      * <code>map&lt;string, .bytedance.volcengine.byteair.FloatArray&gt; floatArrayFeature = 7;</code>
      */
 
-    /* nullable */
-volcengine.byteair.protocol.VolcengineByteair.FloatArray getFloatArrayFeatureOrDefault(
+    volcengine.byteair.protocol.VolcengineByteair.FloatArray getFloatArrayFeatureOrDefault(
         java.lang.String key,
-        /* nullable */
-volcengine.byteair.protocol.VolcengineByteair.FloatArray defaultValue);
+        volcengine.byteair.protocol.VolcengineByteair.FloatArray defaultValue);
     /**
      * <pre>
      * float array feature
@@ -14186,11 +13968,9 @@ volcengine.byteair.protocol.VolcengineByteair.FloatArray defaultValue);
      * <code>map&lt;string, .bytedance.volcengine.byteair.DoubleArray&gt; doubleArrayFeature = 8;</code>
      */
 
-    /* nullable */
-volcengine.byteair.protocol.VolcengineByteair.DoubleArray getDoubleArrayFeatureOrDefault(
+    volcengine.byteair.protocol.VolcengineByteair.DoubleArray getDoubleArrayFeatureOrDefault(
         java.lang.String key,
-        /* nullable */
-volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
+        volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
     /**
      * <pre>
      * double array feature
@@ -14363,8 +14143,6 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -14449,7 +14227,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
     @java.lang.Override
     public boolean containsStringFeature(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetStringFeature().getMap().containsKey(key);
     }
     /**
@@ -14484,7 +14262,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
     public java.lang.String getStringFeatureOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetStringFeature().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -14500,7 +14278,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
 
     public java.lang.String getStringFeatureOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetStringFeature().getMap();
       if (!map.containsKey(key)) {
@@ -14546,7 +14324,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
     @java.lang.Override
     public boolean containsIntFeature(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetIntFeature().getMap().containsKey(key);
     }
     /**
@@ -14581,7 +14359,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
     public long getIntFeatureOrDefault(
         java.lang.String key,
         long defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.Long> map =
           internalGetIntFeature().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -14597,7 +14375,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
 
     public long getIntFeatureOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.Long> map =
           internalGetIntFeature().getMap();
       if (!map.containsKey(key)) {
@@ -14643,7 +14421,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
     @java.lang.Override
     public boolean containsFloatFeature(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetFloatFeature().getMap().containsKey(key);
     }
     /**
@@ -14678,7 +14456,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
     public float getFloatFeatureOrDefault(
         java.lang.String key,
         float defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.Float> map =
           internalGetFloatFeature().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -14694,7 +14472,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
 
     public float getFloatFeatureOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.Float> map =
           internalGetFloatFeature().getMap();
       if (!map.containsKey(key)) {
@@ -14740,7 +14518,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
     @java.lang.Override
     public boolean containsDoubleFeature(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetDoubleFeature().getMap().containsKey(key);
     }
     /**
@@ -14775,7 +14553,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
     public double getDoubleFeatureOrDefault(
         java.lang.String key,
         double defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.Double> map =
           internalGetDoubleFeature().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -14791,7 +14569,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
 
     public double getDoubleFeatureOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.Double> map =
           internalGetDoubleFeature().getMap();
       if (!map.containsKey(key)) {
@@ -14837,7 +14615,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
     @java.lang.Override
     public boolean containsStringArrayFeature(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetStringArrayFeature().getMap().containsKey(key);
     }
     /**
@@ -14872,7 +14650,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
     public volcengine.byteair.protocol.VolcengineByteair.StringArray getStringArrayFeatureOrDefault(
         java.lang.String key,
         volcengine.byteair.protocol.VolcengineByteair.StringArray defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, volcengine.byteair.protocol.VolcengineByteair.StringArray> map =
           internalGetStringArrayFeature().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -14888,7 +14666,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
 
     public volcengine.byteair.protocol.VolcengineByteair.StringArray getStringArrayFeatureOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, volcengine.byteair.protocol.VolcengineByteair.StringArray> map =
           internalGetStringArrayFeature().getMap();
       if (!map.containsKey(key)) {
@@ -14934,7 +14712,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
     @java.lang.Override
     public boolean containsIntArrayFeature(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetIntArrayFeature().getMap().containsKey(key);
     }
     /**
@@ -14969,7 +14747,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
     public volcengine.byteair.protocol.VolcengineByteair.IntArray getIntArrayFeatureOrDefault(
         java.lang.String key,
         volcengine.byteair.protocol.VolcengineByteair.IntArray defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, volcengine.byteair.protocol.VolcengineByteair.IntArray> map =
           internalGetIntArrayFeature().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -14985,7 +14763,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
 
     public volcengine.byteair.protocol.VolcengineByteair.IntArray getIntArrayFeatureOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, volcengine.byteair.protocol.VolcengineByteair.IntArray> map =
           internalGetIntArrayFeature().getMap();
       if (!map.containsKey(key)) {
@@ -15031,7 +14809,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
     @java.lang.Override
     public boolean containsFloatArrayFeature(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetFloatArrayFeature().getMap().containsKey(key);
     }
     /**
@@ -15066,7 +14844,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
     public volcengine.byteair.protocol.VolcengineByteair.FloatArray getFloatArrayFeatureOrDefault(
         java.lang.String key,
         volcengine.byteair.protocol.VolcengineByteair.FloatArray defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, volcengine.byteair.protocol.VolcengineByteair.FloatArray> map =
           internalGetFloatArrayFeature().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -15082,7 +14860,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
 
     public volcengine.byteair.protocol.VolcengineByteair.FloatArray getFloatArrayFeatureOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, volcengine.byteair.protocol.VolcengineByteair.FloatArray> map =
           internalGetFloatArrayFeature().getMap();
       if (!map.containsKey(key)) {
@@ -15128,7 +14906,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
     @java.lang.Override
     public boolean containsDoubleArrayFeature(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetDoubleArrayFeature().getMap().containsKey(key);
     }
     /**
@@ -15163,7 +14941,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
     public volcengine.byteair.protocol.VolcengineByteair.DoubleArray getDoubleArrayFeatureOrDefault(
         java.lang.String key,
         volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, volcengine.byteair.protocol.VolcengineByteair.DoubleArray> map =
           internalGetDoubleArrayFeature().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -15179,7 +14957,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
 
     public volcengine.byteair.protocol.VolcengineByteair.DoubleArray getDoubleArrayFeatureOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, volcengine.byteair.protocol.VolcengineByteair.DoubleArray> map =
           internalGetDoubleArrayFeature().getMap();
       if (!map.containsKey(key)) {
@@ -15778,7 +15556,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
       @java.lang.Override
       public boolean containsStringFeature(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         return internalGetStringFeature().getMap().containsKey(key);
       }
       /**
@@ -15813,7 +15591,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
       public java.lang.String getStringFeatureOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetStringFeature().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -15829,7 +15607,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
 
       public java.lang.String getStringFeatureOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetStringFeature().getMap();
         if (!map.containsKey(key)) {
@@ -15853,7 +15631,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
 
       public Builder removeStringFeature(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableStringFeature().getMutableMap()
             .remove(key);
         return this;
@@ -15876,11 +15654,8 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
       public Builder putStringFeature(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableStringFeature().getMutableMap()
             .put(key, value);
         return this;
@@ -15937,7 +15712,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
       @java.lang.Override
       public boolean containsIntFeature(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         return internalGetIntFeature().getMap().containsKey(key);
       }
       /**
@@ -15972,7 +15747,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
       public long getIntFeatureOrDefault(
           java.lang.String key,
           long defaultValue) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, java.lang.Long> map =
             internalGetIntFeature().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -15988,7 +15763,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
 
       public long getIntFeatureOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, java.lang.Long> map =
             internalGetIntFeature().getMap();
         if (!map.containsKey(key)) {
@@ -16012,7 +15787,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
 
       public Builder removeIntFeature(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableIntFeature().getMutableMap()
             .remove(key);
         return this;
@@ -16035,7 +15810,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
       public Builder putIntFeature(
           java.lang.String key,
           long value) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         
         internalGetMutableIntFeature().getMutableMap()
             .put(key, value);
@@ -16093,7 +15868,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
       @java.lang.Override
       public boolean containsFloatFeature(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         return internalGetFloatFeature().getMap().containsKey(key);
       }
       /**
@@ -16128,7 +15903,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
       public float getFloatFeatureOrDefault(
           java.lang.String key,
           float defaultValue) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, java.lang.Float> map =
             internalGetFloatFeature().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -16144,7 +15919,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
 
       public float getFloatFeatureOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, java.lang.Float> map =
             internalGetFloatFeature().getMap();
         if (!map.containsKey(key)) {
@@ -16168,7 +15943,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
 
       public Builder removeFloatFeature(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableFloatFeature().getMutableMap()
             .remove(key);
         return this;
@@ -16191,7 +15966,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
       public Builder putFloatFeature(
           java.lang.String key,
           float value) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         
         internalGetMutableFloatFeature().getMutableMap()
             .put(key, value);
@@ -16249,7 +16024,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
       @java.lang.Override
       public boolean containsDoubleFeature(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         return internalGetDoubleFeature().getMap().containsKey(key);
       }
       /**
@@ -16284,7 +16059,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
       public double getDoubleFeatureOrDefault(
           java.lang.String key,
           double defaultValue) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, java.lang.Double> map =
             internalGetDoubleFeature().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -16300,7 +16075,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
 
       public double getDoubleFeatureOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, java.lang.Double> map =
             internalGetDoubleFeature().getMap();
         if (!map.containsKey(key)) {
@@ -16324,7 +16099,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
 
       public Builder removeDoubleFeature(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableDoubleFeature().getMutableMap()
             .remove(key);
         return this;
@@ -16347,7 +16122,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
       public Builder putDoubleFeature(
           java.lang.String key,
           double value) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         
         internalGetMutableDoubleFeature().getMutableMap()
             .put(key, value);
@@ -16405,7 +16180,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
       @java.lang.Override
       public boolean containsStringArrayFeature(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         return internalGetStringArrayFeature().getMap().containsKey(key);
       }
       /**
@@ -16440,7 +16215,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
       public volcengine.byteair.protocol.VolcengineByteair.StringArray getStringArrayFeatureOrDefault(
           java.lang.String key,
           volcengine.byteair.protocol.VolcengineByteair.StringArray defaultValue) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, volcengine.byteair.protocol.VolcengineByteair.StringArray> map =
             internalGetStringArrayFeature().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -16456,7 +16231,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
 
       public volcengine.byteair.protocol.VolcengineByteair.StringArray getStringArrayFeatureOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, volcengine.byteair.protocol.VolcengineByteair.StringArray> map =
             internalGetStringArrayFeature().getMap();
         if (!map.containsKey(key)) {
@@ -16480,7 +16255,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
 
       public Builder removeStringArrayFeature(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableStringArrayFeature().getMutableMap()
             .remove(key);
         return this;
@@ -16503,11 +16278,8 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
       public Builder putStringArrayFeature(
           java.lang.String key,
           volcengine.byteair.protocol.VolcengineByteair.StringArray value) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableStringArrayFeature().getMutableMap()
             .put(key, value);
         return this;
@@ -16564,7 +16336,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
       @java.lang.Override
       public boolean containsIntArrayFeature(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         return internalGetIntArrayFeature().getMap().containsKey(key);
       }
       /**
@@ -16599,7 +16371,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
       public volcengine.byteair.protocol.VolcengineByteair.IntArray getIntArrayFeatureOrDefault(
           java.lang.String key,
           volcengine.byteair.protocol.VolcengineByteair.IntArray defaultValue) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, volcengine.byteair.protocol.VolcengineByteair.IntArray> map =
             internalGetIntArrayFeature().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -16615,7 +16387,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
 
       public volcengine.byteair.protocol.VolcengineByteair.IntArray getIntArrayFeatureOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, volcengine.byteair.protocol.VolcengineByteair.IntArray> map =
             internalGetIntArrayFeature().getMap();
         if (!map.containsKey(key)) {
@@ -16639,7 +16411,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
 
       public Builder removeIntArrayFeature(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableIntArrayFeature().getMutableMap()
             .remove(key);
         return this;
@@ -16662,11 +16434,8 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
       public Builder putIntArrayFeature(
           java.lang.String key,
           volcengine.byteair.protocol.VolcengineByteair.IntArray value) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableIntArrayFeature().getMutableMap()
             .put(key, value);
         return this;
@@ -16723,7 +16492,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
       @java.lang.Override
       public boolean containsFloatArrayFeature(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         return internalGetFloatArrayFeature().getMap().containsKey(key);
       }
       /**
@@ -16758,7 +16527,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
       public volcengine.byteair.protocol.VolcengineByteair.FloatArray getFloatArrayFeatureOrDefault(
           java.lang.String key,
           volcengine.byteair.protocol.VolcengineByteair.FloatArray defaultValue) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, volcengine.byteair.protocol.VolcengineByteair.FloatArray> map =
             internalGetFloatArrayFeature().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -16774,7 +16543,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
 
       public volcengine.byteair.protocol.VolcengineByteair.FloatArray getFloatArrayFeatureOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, volcengine.byteair.protocol.VolcengineByteair.FloatArray> map =
             internalGetFloatArrayFeature().getMap();
         if (!map.containsKey(key)) {
@@ -16798,7 +16567,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
 
       public Builder removeFloatArrayFeature(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableFloatArrayFeature().getMutableMap()
             .remove(key);
         return this;
@@ -16821,11 +16590,8 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
       public Builder putFloatArrayFeature(
           java.lang.String key,
           volcengine.byteair.protocol.VolcengineByteair.FloatArray value) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableFloatArrayFeature().getMutableMap()
             .put(key, value);
         return this;
@@ -16882,7 +16648,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
       @java.lang.Override
       public boolean containsDoubleArrayFeature(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         return internalGetDoubleArrayFeature().getMap().containsKey(key);
       }
       /**
@@ -16917,7 +16683,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
       public volcengine.byteair.protocol.VolcengineByteair.DoubleArray getDoubleArrayFeatureOrDefault(
           java.lang.String key,
           volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, volcengine.byteair.protocol.VolcengineByteair.DoubleArray> map =
             internalGetDoubleArrayFeature().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -16933,7 +16699,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
 
       public volcengine.byteair.protocol.VolcengineByteair.DoubleArray getDoubleArrayFeatureOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, volcengine.byteair.protocol.VolcengineByteair.DoubleArray> map =
             internalGetDoubleArrayFeature().getMap();
         if (!map.containsKey(key)) {
@@ -16957,7 +16723,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
 
       public Builder removeDoubleArrayFeature(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableDoubleArrayFeature().getMutableMap()
             .remove(key);
         return this;
@@ -16980,11 +16746,8 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
       public Builder putDoubleArrayFeature(
           java.lang.String key,
           volcengine.byteair.protocol.VolcengineByteair.DoubleArray value) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableDoubleArrayFeature().getMutableMap()
             .put(key, value);
         return this;
@@ -17100,11 +16863,9 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
      * <code>map&lt;string, string&gt; stringFilter = 1;</code>
      */
 
-    /* nullable */
-java.lang.String getStringFilterOrDefault(
+    java.lang.String getStringFilterOrDefault(
         java.lang.String key,
-        /* nullable */
-java.lang.String defaultValue);
+        java.lang.String defaultValue);
     /**
      * <pre>
      * string filter
@@ -17318,11 +17079,9 @@ java.lang.String defaultValue);
      * <code>map&lt;string, .bytedance.volcengine.byteair.StringArray&gt; stringArrayFilter = 5;</code>
      */
 
-    /* nullable */
-volcengine.byteair.protocol.VolcengineByteair.StringArray getStringArrayFilterOrDefault(
+    volcengine.byteair.protocol.VolcengineByteair.StringArray getStringArrayFilterOrDefault(
         java.lang.String key,
-        /* nullable */
-volcengine.byteair.protocol.VolcengineByteair.StringArray defaultValue);
+        volcengine.byteair.protocol.VolcengineByteair.StringArray defaultValue);
     /**
      * <pre>
      * string array filter
@@ -17374,11 +17133,9 @@ volcengine.byteair.protocol.VolcengineByteair.StringArray defaultValue);
      * <code>map&lt;string, .bytedance.volcengine.byteair.IntArray&gt; intArrayFilter = 6;</code>
      */
 
-    /* nullable */
-volcengine.byteair.protocol.VolcengineByteair.IntArray getIntArrayFilterOrDefault(
+    volcengine.byteair.protocol.VolcengineByteair.IntArray getIntArrayFilterOrDefault(
         java.lang.String key,
-        /* nullable */
-volcengine.byteair.protocol.VolcengineByteair.IntArray defaultValue);
+        volcengine.byteair.protocol.VolcengineByteair.IntArray defaultValue);
     /**
      * <pre>
      * int array filter
@@ -17430,11 +17187,9 @@ volcengine.byteair.protocol.VolcengineByteair.IntArray defaultValue);
      * <code>map&lt;string, .bytedance.volcengine.byteair.FloatArray&gt; floatArrayFilter = 7;</code>
      */
 
-    /* nullable */
-volcengine.byteair.protocol.VolcengineByteair.FloatArray getFloatArrayFilterOrDefault(
+    volcengine.byteair.protocol.VolcengineByteair.FloatArray getFloatArrayFilterOrDefault(
         java.lang.String key,
-        /* nullable */
-volcengine.byteair.protocol.VolcengineByteair.FloatArray defaultValue);
+        volcengine.byteair.protocol.VolcengineByteair.FloatArray defaultValue);
     /**
      * <pre>
      * float array filter
@@ -17486,11 +17241,9 @@ volcengine.byteair.protocol.VolcengineByteair.FloatArray defaultValue);
      * <code>map&lt;string, .bytedance.volcengine.byteair.DoubleArray&gt; doubleArrayFilter = 8;</code>
      */
 
-    /* nullable */
-volcengine.byteair.protocol.VolcengineByteair.DoubleArray getDoubleArrayFilterOrDefault(
+    volcengine.byteair.protocol.VolcengineByteair.DoubleArray getDoubleArrayFilterOrDefault(
         java.lang.String key,
-        /* nullable */
-volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
+        volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
     /**
      * <pre>
      * double array filter
@@ -17663,8 +17416,6 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -17749,7 +17500,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
     @java.lang.Override
     public boolean containsStringFilter(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetStringFilter().getMap().containsKey(key);
     }
     /**
@@ -17784,7 +17535,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
     public java.lang.String getStringFilterOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetStringFilter().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -17800,7 +17551,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
 
     public java.lang.String getStringFilterOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetStringFilter().getMap();
       if (!map.containsKey(key)) {
@@ -17846,7 +17597,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
     @java.lang.Override
     public boolean containsIntFilter(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetIntFilter().getMap().containsKey(key);
     }
     /**
@@ -17881,7 +17632,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
     public long getIntFilterOrDefault(
         java.lang.String key,
         long defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.Long> map =
           internalGetIntFilter().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -17897,7 +17648,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
 
     public long getIntFilterOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.Long> map =
           internalGetIntFilter().getMap();
       if (!map.containsKey(key)) {
@@ -17943,7 +17694,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
     @java.lang.Override
     public boolean containsFloatFilter(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetFloatFilter().getMap().containsKey(key);
     }
     /**
@@ -17978,7 +17729,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
     public float getFloatFilterOrDefault(
         java.lang.String key,
         float defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.Float> map =
           internalGetFloatFilter().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -17994,7 +17745,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
 
     public float getFloatFilterOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.Float> map =
           internalGetFloatFilter().getMap();
       if (!map.containsKey(key)) {
@@ -18040,7 +17791,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
     @java.lang.Override
     public boolean containsDoubleFilter(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetDoubleFilter().getMap().containsKey(key);
     }
     /**
@@ -18075,7 +17826,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
     public double getDoubleFilterOrDefault(
         java.lang.String key,
         double defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.Double> map =
           internalGetDoubleFilter().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -18091,7 +17842,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
 
     public double getDoubleFilterOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.Double> map =
           internalGetDoubleFilter().getMap();
       if (!map.containsKey(key)) {
@@ -18137,7 +17888,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
     @java.lang.Override
     public boolean containsStringArrayFilter(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetStringArrayFilter().getMap().containsKey(key);
     }
     /**
@@ -18172,7 +17923,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
     public volcengine.byteair.protocol.VolcengineByteair.StringArray getStringArrayFilterOrDefault(
         java.lang.String key,
         volcengine.byteair.protocol.VolcengineByteair.StringArray defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, volcengine.byteair.protocol.VolcengineByteair.StringArray> map =
           internalGetStringArrayFilter().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -18188,7 +17939,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
 
     public volcengine.byteair.protocol.VolcengineByteair.StringArray getStringArrayFilterOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, volcengine.byteair.protocol.VolcengineByteair.StringArray> map =
           internalGetStringArrayFilter().getMap();
       if (!map.containsKey(key)) {
@@ -18234,7 +17985,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
     @java.lang.Override
     public boolean containsIntArrayFilter(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetIntArrayFilter().getMap().containsKey(key);
     }
     /**
@@ -18269,7 +18020,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
     public volcengine.byteair.protocol.VolcengineByteair.IntArray getIntArrayFilterOrDefault(
         java.lang.String key,
         volcengine.byteair.protocol.VolcengineByteair.IntArray defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, volcengine.byteair.protocol.VolcengineByteair.IntArray> map =
           internalGetIntArrayFilter().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -18285,7 +18036,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
 
     public volcengine.byteair.protocol.VolcengineByteair.IntArray getIntArrayFilterOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, volcengine.byteair.protocol.VolcengineByteair.IntArray> map =
           internalGetIntArrayFilter().getMap();
       if (!map.containsKey(key)) {
@@ -18331,7 +18082,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
     @java.lang.Override
     public boolean containsFloatArrayFilter(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetFloatArrayFilter().getMap().containsKey(key);
     }
     /**
@@ -18366,7 +18117,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
     public volcengine.byteair.protocol.VolcengineByteair.FloatArray getFloatArrayFilterOrDefault(
         java.lang.String key,
         volcengine.byteair.protocol.VolcengineByteair.FloatArray defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, volcengine.byteair.protocol.VolcengineByteair.FloatArray> map =
           internalGetFloatArrayFilter().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -18382,7 +18133,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
 
     public volcengine.byteair.protocol.VolcengineByteair.FloatArray getFloatArrayFilterOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, volcengine.byteair.protocol.VolcengineByteair.FloatArray> map =
           internalGetFloatArrayFilter().getMap();
       if (!map.containsKey(key)) {
@@ -18428,7 +18179,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
     @java.lang.Override
     public boolean containsDoubleArrayFilter(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetDoubleArrayFilter().getMap().containsKey(key);
     }
     /**
@@ -18463,7 +18214,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
     public volcengine.byteair.protocol.VolcengineByteair.DoubleArray getDoubleArrayFilterOrDefault(
         java.lang.String key,
         volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, volcengine.byteair.protocol.VolcengineByteair.DoubleArray> map =
           internalGetDoubleArrayFilter().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -18479,7 +18230,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
 
     public volcengine.byteair.protocol.VolcengineByteair.DoubleArray getDoubleArrayFilterOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, volcengine.byteair.protocol.VolcengineByteair.DoubleArray> map =
           internalGetDoubleArrayFilter().getMap();
       if (!map.containsKey(key)) {
@@ -19078,7 +18829,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
       @java.lang.Override
       public boolean containsStringFilter(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         return internalGetStringFilter().getMap().containsKey(key);
       }
       /**
@@ -19113,7 +18864,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
       public java.lang.String getStringFilterOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetStringFilter().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -19129,7 +18880,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
 
       public java.lang.String getStringFilterOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetStringFilter().getMap();
         if (!map.containsKey(key)) {
@@ -19153,7 +18904,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
 
       public Builder removeStringFilter(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableStringFilter().getMutableMap()
             .remove(key);
         return this;
@@ -19176,11 +18927,8 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
       public Builder putStringFilter(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableStringFilter().getMutableMap()
             .put(key, value);
         return this;
@@ -19237,7 +18985,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
       @java.lang.Override
       public boolean containsIntFilter(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         return internalGetIntFilter().getMap().containsKey(key);
       }
       /**
@@ -19272,7 +19020,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
       public long getIntFilterOrDefault(
           java.lang.String key,
           long defaultValue) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, java.lang.Long> map =
             internalGetIntFilter().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -19288,7 +19036,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
 
       public long getIntFilterOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, java.lang.Long> map =
             internalGetIntFilter().getMap();
         if (!map.containsKey(key)) {
@@ -19312,7 +19060,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
 
       public Builder removeIntFilter(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableIntFilter().getMutableMap()
             .remove(key);
         return this;
@@ -19335,7 +19083,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
       public Builder putIntFilter(
           java.lang.String key,
           long value) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         
         internalGetMutableIntFilter().getMutableMap()
             .put(key, value);
@@ -19393,7 +19141,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
       @java.lang.Override
       public boolean containsFloatFilter(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         return internalGetFloatFilter().getMap().containsKey(key);
       }
       /**
@@ -19428,7 +19176,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
       public float getFloatFilterOrDefault(
           java.lang.String key,
           float defaultValue) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, java.lang.Float> map =
             internalGetFloatFilter().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -19444,7 +19192,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
 
       public float getFloatFilterOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, java.lang.Float> map =
             internalGetFloatFilter().getMap();
         if (!map.containsKey(key)) {
@@ -19468,7 +19216,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
 
       public Builder removeFloatFilter(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableFloatFilter().getMutableMap()
             .remove(key);
         return this;
@@ -19491,7 +19239,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
       public Builder putFloatFilter(
           java.lang.String key,
           float value) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         
         internalGetMutableFloatFilter().getMutableMap()
             .put(key, value);
@@ -19549,7 +19297,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
       @java.lang.Override
       public boolean containsDoubleFilter(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         return internalGetDoubleFilter().getMap().containsKey(key);
       }
       /**
@@ -19584,7 +19332,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
       public double getDoubleFilterOrDefault(
           java.lang.String key,
           double defaultValue) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, java.lang.Double> map =
             internalGetDoubleFilter().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -19600,7 +19348,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
 
       public double getDoubleFilterOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, java.lang.Double> map =
             internalGetDoubleFilter().getMap();
         if (!map.containsKey(key)) {
@@ -19624,7 +19372,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
 
       public Builder removeDoubleFilter(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableDoubleFilter().getMutableMap()
             .remove(key);
         return this;
@@ -19647,7 +19395,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
       public Builder putDoubleFilter(
           java.lang.String key,
           double value) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         
         internalGetMutableDoubleFilter().getMutableMap()
             .put(key, value);
@@ -19705,7 +19453,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
       @java.lang.Override
       public boolean containsStringArrayFilter(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         return internalGetStringArrayFilter().getMap().containsKey(key);
       }
       /**
@@ -19740,7 +19488,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
       public volcengine.byteair.protocol.VolcengineByteair.StringArray getStringArrayFilterOrDefault(
           java.lang.String key,
           volcengine.byteair.protocol.VolcengineByteair.StringArray defaultValue) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, volcengine.byteair.protocol.VolcengineByteair.StringArray> map =
             internalGetStringArrayFilter().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -19756,7 +19504,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
 
       public volcengine.byteair.protocol.VolcengineByteair.StringArray getStringArrayFilterOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, volcengine.byteair.protocol.VolcengineByteair.StringArray> map =
             internalGetStringArrayFilter().getMap();
         if (!map.containsKey(key)) {
@@ -19780,7 +19528,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
 
       public Builder removeStringArrayFilter(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableStringArrayFilter().getMutableMap()
             .remove(key);
         return this;
@@ -19803,11 +19551,8 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
       public Builder putStringArrayFilter(
           java.lang.String key,
           volcengine.byteair.protocol.VolcengineByteair.StringArray value) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableStringArrayFilter().getMutableMap()
             .put(key, value);
         return this;
@@ -19864,7 +19609,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
       @java.lang.Override
       public boolean containsIntArrayFilter(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         return internalGetIntArrayFilter().getMap().containsKey(key);
       }
       /**
@@ -19899,7 +19644,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
       public volcengine.byteair.protocol.VolcengineByteair.IntArray getIntArrayFilterOrDefault(
           java.lang.String key,
           volcengine.byteair.protocol.VolcengineByteair.IntArray defaultValue) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, volcengine.byteair.protocol.VolcengineByteair.IntArray> map =
             internalGetIntArrayFilter().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -19915,7 +19660,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
 
       public volcengine.byteair.protocol.VolcengineByteair.IntArray getIntArrayFilterOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, volcengine.byteair.protocol.VolcengineByteair.IntArray> map =
             internalGetIntArrayFilter().getMap();
         if (!map.containsKey(key)) {
@@ -19939,7 +19684,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
 
       public Builder removeIntArrayFilter(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableIntArrayFilter().getMutableMap()
             .remove(key);
         return this;
@@ -19962,11 +19707,8 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
       public Builder putIntArrayFilter(
           java.lang.String key,
           volcengine.byteair.protocol.VolcengineByteair.IntArray value) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableIntArrayFilter().getMutableMap()
             .put(key, value);
         return this;
@@ -20023,7 +19765,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
       @java.lang.Override
       public boolean containsFloatArrayFilter(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         return internalGetFloatArrayFilter().getMap().containsKey(key);
       }
       /**
@@ -20058,7 +19800,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
       public volcengine.byteair.protocol.VolcengineByteair.FloatArray getFloatArrayFilterOrDefault(
           java.lang.String key,
           volcengine.byteair.protocol.VolcengineByteair.FloatArray defaultValue) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, volcengine.byteair.protocol.VolcengineByteair.FloatArray> map =
             internalGetFloatArrayFilter().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -20074,7 +19816,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
 
       public volcengine.byteair.protocol.VolcengineByteair.FloatArray getFloatArrayFilterOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, volcengine.byteair.protocol.VolcengineByteair.FloatArray> map =
             internalGetFloatArrayFilter().getMap();
         if (!map.containsKey(key)) {
@@ -20098,7 +19840,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
 
       public Builder removeFloatArrayFilter(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableFloatArrayFilter().getMutableMap()
             .remove(key);
         return this;
@@ -20121,11 +19863,8 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
       public Builder putFloatArrayFilter(
           java.lang.String key,
           volcengine.byteair.protocol.VolcengineByteair.FloatArray value) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableFloatArrayFilter().getMutableMap()
             .put(key, value);
         return this;
@@ -20182,7 +19921,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
       @java.lang.Override
       public boolean containsDoubleArrayFilter(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         return internalGetDoubleArrayFilter().getMap().containsKey(key);
       }
       /**
@@ -20217,7 +19956,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
       public volcengine.byteair.protocol.VolcengineByteair.DoubleArray getDoubleArrayFilterOrDefault(
           java.lang.String key,
           volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, volcengine.byteair.protocol.VolcengineByteair.DoubleArray> map =
             internalGetDoubleArrayFilter().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -20233,7 +19972,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
 
       public volcengine.byteair.protocol.VolcengineByteair.DoubleArray getDoubleArrayFilterOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, volcengine.byteair.protocol.VolcengineByteair.DoubleArray> map =
             internalGetDoubleArrayFilter().getMap();
         if (!map.containsKey(key)) {
@@ -20257,7 +19996,7 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
 
       public Builder removeDoubleArrayFilter(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableDoubleArrayFilter().getMutableMap()
             .remove(key);
         return this;
@@ -20280,11 +20019,8 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
       public Builder putDoubleArrayFilter(
           java.lang.String key,
           volcengine.byteair.protocol.VolcengineByteair.DoubleArray value) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableDoubleArrayFilter().getMutableMap()
             .put(key, value);
         return this;
@@ -20463,11 +20199,9 @@ volcengine.byteair.protocol.VolcengineByteair.DoubleArray defaultValue);
      * <code>map&lt;string, string&gt; extra = 100;</code>
      */
 
-    /* nullable */
-java.lang.String getExtraOrDefault(
+    java.lang.String getExtraOrDefault(
         java.lang.String key,
-        /* nullable */
-java.lang.String defaultValue);
+        java.lang.String defaultValue);
     /**
      * <pre>
      * Optional.
@@ -20573,8 +20307,6 @@ java.lang.String defaultValue);
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -20743,7 +20475,7 @@ java.lang.String defaultValue);
     @java.lang.Override
     public boolean containsExtra(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetExtra().getMap().containsKey(key);
     }
     /**
@@ -20782,7 +20514,7 @@ java.lang.String defaultValue);
     public java.lang.String getExtraOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetExtra().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -20800,7 +20532,7 @@ java.lang.String defaultValue);
 
     public java.lang.String getExtraOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetExtra().getMap();
       if (!map.containsKey(key)) {
@@ -20823,16 +20555,16 @@ java.lang.String defaultValue);
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+      if (!getIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (java.lang.Double.doubleToRawLongBits(score_) != 0) {
+      if (score_ != 0D) {
         output.writeDouble(2, score_);
       }
-      if (java.lang.Double.doubleToRawLongBits(price_) != 0) {
+      if (price_ != 0D) {
         output.writeDouble(3, price_);
       }
-      if (java.lang.Double.doubleToRawLongBits(boostCoef_) != 0) {
+      if (boostCoef_ != 0D) {
         output.writeDouble(4, boostCoef_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -20850,18 +20582,18 @@ java.lang.String defaultValue);
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+      if (!getIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (java.lang.Double.doubleToRawLongBits(score_) != 0) {
+      if (score_ != 0D) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(2, score_);
       }
-      if (java.lang.Double.doubleToRawLongBits(price_) != 0) {
+      if (price_ != 0D) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(3, price_);
       }
-      if (java.lang.Double.doubleToRawLongBits(boostCoef_) != 0) {
+      if (boostCoef_ != 0D) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(4, boostCoef_);
       }
@@ -21497,7 +21229,7 @@ java.lang.String defaultValue);
       @java.lang.Override
       public boolean containsExtra(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         return internalGetExtra().getMap().containsKey(key);
       }
       /**
@@ -21536,7 +21268,7 @@ java.lang.String defaultValue);
       public java.lang.String getExtraOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetExtra().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -21554,7 +21286,7 @@ java.lang.String defaultValue);
 
       public java.lang.String getExtraOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetExtra().getMap();
         if (!map.containsKey(key)) {
@@ -21580,7 +21312,7 @@ java.lang.String defaultValue);
 
       public Builder removeExtra(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableExtra().getMutableMap()
             .remove(key);
         return this;
@@ -21605,11 +21337,8 @@ java.lang.String defaultValue);
       public Builder putExtra(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableExtra().getMutableMap()
             .put(key, value);
         return this;
@@ -21746,11 +21475,9 @@ java.lang.String defaultValue);
      * <code>map&lt;string, string&gt; extra = 101;</code>
      */
 
-    /* nullable */
-java.lang.String getExtraOrDefault(
+    java.lang.String getExtraOrDefault(
         java.lang.String key,
-        /* nullable */
-java.lang.String defaultValue);
+        java.lang.String defaultValue);
     /**
      * <pre>
      * Optional.
@@ -21839,8 +21566,6 @@ java.lang.String defaultValue);
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -21929,7 +21654,7 @@ java.lang.String defaultValue);
     @java.lang.Override
     public boolean containsExtra(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetExtra().getMap().containsKey(key);
     }
     /**
@@ -21968,7 +21693,7 @@ java.lang.String defaultValue);
     public java.lang.String getExtraOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetExtra().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -21986,7 +21711,7 @@ java.lang.String defaultValue);
 
     public java.lang.String getExtraOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetExtra().getMap();
       if (!map.containsKey(key)) {
@@ -22434,7 +22159,7 @@ java.lang.String defaultValue);
       @java.lang.Override
       public boolean containsExtra(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         return internalGetExtra().getMap().containsKey(key);
       }
       /**
@@ -22473,7 +22198,7 @@ java.lang.String defaultValue);
       public java.lang.String getExtraOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetExtra().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -22491,7 +22216,7 @@ java.lang.String defaultValue);
 
       public java.lang.String getExtraOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetExtra().getMap();
         if (!map.containsKey(key)) {
@@ -22517,7 +22242,7 @@ java.lang.String defaultValue);
 
       public Builder removeExtra(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableExtra().getMutableMap()
             .remove(key);
         return this;
@@ -22542,11 +22267,8 @@ java.lang.String defaultValue);
       public Builder putExtra(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableExtra().getMutableMap()
             .put(key, value);
         return this;
@@ -22694,11 +22416,9 @@ java.lang.String defaultValue);
      * <code>map&lt;string, string&gt; extra = 100;</code>
      */
 
-    /* nullable */
-java.lang.String getExtraOrDefault(
+    java.lang.String getExtraOrDefault(
         java.lang.String key,
-        /* nullable */
-java.lang.String defaultValue);
+        java.lang.String defaultValue);
     /**
      * <pre>
      * Optional.
@@ -22789,8 +22509,6 @@ java.lang.String defaultValue);
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -22911,7 +22629,7 @@ java.lang.String defaultValue);
     @java.lang.Override
     public boolean containsExtra(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetExtra().getMap().containsKey(key);
     }
     /**
@@ -22950,7 +22668,7 @@ java.lang.String defaultValue);
     public java.lang.String getExtraOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetExtra().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -22968,7 +22686,7 @@ java.lang.String defaultValue);
 
     public java.lang.String getExtraOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetExtra().getMap();
       if (!map.containsKey(key)) {
@@ -22991,7 +22709,7 @@ java.lang.String defaultValue);
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+      if (!getIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -23009,7 +22727,7 @@ java.lang.String defaultValue);
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+      if (!getIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -23470,7 +23188,7 @@ java.lang.String defaultValue);
       @java.lang.Override
       public boolean containsExtra(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         return internalGetExtra().getMap().containsKey(key);
       }
       /**
@@ -23509,7 +23227,7 @@ java.lang.String defaultValue);
       public java.lang.String getExtraOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetExtra().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -23527,7 +23245,7 @@ java.lang.String defaultValue);
 
       public java.lang.String getExtraOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetExtra().getMap();
         if (!map.containsKey(key)) {
@@ -23553,7 +23271,7 @@ java.lang.String defaultValue);
 
       public Builder removeExtra(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableExtra().getMutableMap()
             .remove(key);
         return this;
@@ -23578,11 +23296,8 @@ java.lang.String defaultValue);
       public Builder putExtra(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableExtra().getMutableMap()
             .put(key, value);
         return this;
@@ -23809,11 +23524,9 @@ java.lang.String defaultValue);
      * <code>map&lt;string, .bytedance.volcengine.byteair.StringArray&gt; filters = 7;</code>
      */
 
-    /* nullable */
-volcengine.byteair.protocol.VolcengineByteair.StringArray getFiltersOrDefault(
+    volcengine.byteair.protocol.VolcengineByteair.StringArray getFiltersOrDefault(
         java.lang.String key,
-        /* nullable */
-volcengine.byteair.protocol.VolcengineByteair.StringArray defaultValue);
+        volcengine.byteair.protocol.VolcengineByteair.StringArray defaultValue);
     /**
      * <pre>
      * Optional
@@ -23871,11 +23584,9 @@ volcengine.byteair.protocol.VolcengineByteair.StringArray defaultValue);
      * <code>map&lt;string, .bytedance.volcengine.byteair.StringArray&gt; filterOut = 8;</code>
      */
 
-    /* nullable */
-volcengine.byteair.protocol.VolcengineByteair.StringArray getFilterOutOrDefault(
+    volcengine.byteair.protocol.VolcengineByteair.StringArray getFilterOutOrDefault(
         java.lang.String key,
-        /* nullable */
-volcengine.byteair.protocol.VolcengineByteair.StringArray defaultValue);
+        volcengine.byteair.protocol.VolcengineByteair.StringArray defaultValue);
     /**
      * <pre>
      * Optional
@@ -24064,8 +23775,6 @@ volcengine.byteair.protocol.VolcengineByteair.StringArray defaultValue);
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -24316,7 +24025,7 @@ volcengine.byteair.protocol.VolcengineByteair.StringArray defaultValue);
     @java.lang.Override
     public boolean containsFilters(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetFilters().getMap().containsKey(key);
     }
     /**
@@ -24355,7 +24064,7 @@ volcengine.byteair.protocol.VolcengineByteair.StringArray defaultValue);
     public volcengine.byteair.protocol.VolcengineByteair.StringArray getFiltersOrDefault(
         java.lang.String key,
         volcengine.byteair.protocol.VolcengineByteair.StringArray defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, volcengine.byteair.protocol.VolcengineByteair.StringArray> map =
           internalGetFilters().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -24373,7 +24082,7 @@ volcengine.byteair.protocol.VolcengineByteair.StringArray defaultValue);
 
     public volcengine.byteair.protocol.VolcengineByteair.StringArray getFiltersOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, volcengine.byteair.protocol.VolcengineByteair.StringArray> map =
           internalGetFilters().getMap();
       if (!map.containsKey(key)) {
@@ -24420,7 +24129,7 @@ volcengine.byteair.protocol.VolcengineByteair.StringArray defaultValue);
     @java.lang.Override
     public boolean containsFilterOut(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetFilterOut().getMap().containsKey(key);
     }
     /**
@@ -24457,7 +24166,7 @@ volcengine.byteair.protocol.VolcengineByteair.StringArray defaultValue);
     public volcengine.byteair.protocol.VolcengineByteair.StringArray getFilterOutOrDefault(
         java.lang.String key,
         volcengine.byteair.protocol.VolcengineByteair.StringArray defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, volcengine.byteair.protocol.VolcengineByteair.StringArray> map =
           internalGetFilterOut().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -24474,7 +24183,7 @@ volcengine.byteair.protocol.VolcengineByteair.StringArray defaultValue);
 
     public volcengine.byteair.protocol.VolcengineByteair.StringArray getFilterOutOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, volcengine.byteair.protocol.VolcengineByteair.StringArray> map =
           internalGetFilterOut().getMap();
       if (!map.containsKey(key)) {
@@ -24574,10 +24283,10 @@ volcengine.byteair.protocol.VolcengineByteair.StringArray defaultValue);
       if (sortType_ != 0) {
         output.writeInt32(4, sortType_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(content_)) {
+      if (!getContentBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, content_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(query_)) {
+      if (!getQueryBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, query_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -24620,10 +24329,10 @@ volcengine.byteair.protocol.VolcengineByteair.StringArray defaultValue);
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(4, sortType_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(content_)) {
+      if (!getContentBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, content_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(query_)) {
+      if (!getQueryBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, query_);
       }
       for (java.util.Map.Entry<java.lang.String, volcengine.byteair.protocol.VolcengineByteair.StringArray> entry
@@ -25535,7 +25244,7 @@ volcengine.byteair.protocol.VolcengineByteair.StringArray defaultValue);
       @java.lang.Override
       public boolean containsFilters(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         return internalGetFilters().getMap().containsKey(key);
       }
       /**
@@ -25574,7 +25283,7 @@ volcengine.byteair.protocol.VolcengineByteair.StringArray defaultValue);
       public volcengine.byteair.protocol.VolcengineByteair.StringArray getFiltersOrDefault(
           java.lang.String key,
           volcengine.byteair.protocol.VolcengineByteair.StringArray defaultValue) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, volcengine.byteair.protocol.VolcengineByteair.StringArray> map =
             internalGetFilters().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -25592,7 +25301,7 @@ volcengine.byteair.protocol.VolcengineByteair.StringArray defaultValue);
 
       public volcengine.byteair.protocol.VolcengineByteair.StringArray getFiltersOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, volcengine.byteair.protocol.VolcengineByteair.StringArray> map =
             internalGetFilters().getMap();
         if (!map.containsKey(key)) {
@@ -25618,7 +25327,7 @@ volcengine.byteair.protocol.VolcengineByteair.StringArray defaultValue);
 
       public Builder removeFilters(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableFilters().getMutableMap()
             .remove(key);
         return this;
@@ -25643,11 +25352,8 @@ volcengine.byteair.protocol.VolcengineByteair.StringArray defaultValue);
       public Builder putFilters(
           java.lang.String key,
           volcengine.byteair.protocol.VolcengineByteair.StringArray value) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableFilters().getMutableMap()
             .put(key, value);
         return this;
@@ -25707,7 +25413,7 @@ volcengine.byteair.protocol.VolcengineByteair.StringArray defaultValue);
       @java.lang.Override
       public boolean containsFilterOut(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         return internalGetFilterOut().getMap().containsKey(key);
       }
       /**
@@ -25744,7 +25450,7 @@ volcengine.byteair.protocol.VolcengineByteair.StringArray defaultValue);
       public volcengine.byteair.protocol.VolcengineByteair.StringArray getFilterOutOrDefault(
           java.lang.String key,
           volcengine.byteair.protocol.VolcengineByteair.StringArray defaultValue) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, volcengine.byteair.protocol.VolcengineByteair.StringArray> map =
             internalGetFilterOut().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -25761,7 +25467,7 @@ volcengine.byteair.protocol.VolcengineByteair.StringArray defaultValue);
 
       public volcengine.byteair.protocol.VolcengineByteair.StringArray getFilterOutOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, volcengine.byteair.protocol.VolcengineByteair.StringArray> map =
             internalGetFilterOut().getMap();
         if (!map.containsKey(key)) {
@@ -25786,7 +25492,7 @@ volcengine.byteair.protocol.VolcengineByteair.StringArray defaultValue);
 
       public Builder removeFilterOut(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableFilterOut().getMutableMap()
             .remove(key);
         return this;
@@ -25810,11 +25516,8 @@ volcengine.byteair.protocol.VolcengineByteair.StringArray defaultValue);
       public Builder putFilterOut(
           java.lang.String key,
           volcengine.byteair.protocol.VolcengineByteair.StringArray value) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableFilterOut().getMutableMap()
             .put(key, value);
         return this;
@@ -26228,8 +25931,6 @@ volcengine.byteair.protocol.VolcengineByteair.StringArray defaultValue);
      * </pre>
      *
      * <code>int64 goodsId = 1 [deprecated = true];</code>
-     * @deprecated bytedance.volcengine.byteair.SearchGoods.goodsId is deprecated.
-     *     See volcengine_byteair.proto;l=354
      * @return The goodsId.
      */
     @java.lang.Deprecated long getGoodsId();
@@ -26356,8 +26057,6 @@ volcengine.byteair.protocol.VolcengineByteair.StringArray defaultValue);
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -26388,8 +26087,6 @@ volcengine.byteair.protocol.VolcengineByteair.StringArray defaultValue);
      * </pre>
      *
      * <code>int64 goodsId = 1 [deprecated = true];</code>
-     * @deprecated bytedance.volcengine.byteair.SearchGoods.goodsId is deprecated.
-     *     See volcengine_byteair.proto;l=354
      * @return The goodsId.
      */
     @java.lang.Override
@@ -26494,13 +26191,13 @@ volcengine.byteair.protocol.VolcengineByteair.StringArray defaultValue);
       if (goodsId_ != 0L) {
         output.writeInt64(1, goodsId_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(goodsIdStr_)) {
+      if (!getGoodsIdStrBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, goodsIdStr_);
       }
-      if (java.lang.Float.floatToRawIntBits(price_) != 0) {
+      if (price_ != 0F) {
         output.writeFloat(3, price_);
       }
-      if (java.lang.Float.floatToRawIntBits(boostCeof_) != 0) {
+      if (boostCeof_ != 0F) {
         output.writeFloat(4, boostCeof_);
       }
       unknownFields.writeTo(output);
@@ -26516,14 +26213,14 @@ volcengine.byteair.protocol.VolcengineByteair.StringArray defaultValue);
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(1, goodsId_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(goodsIdStr_)) {
+      if (!getGoodsIdStrBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, goodsIdStr_);
       }
-      if (java.lang.Float.floatToRawIntBits(price_) != 0) {
+      if (price_ != 0F) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(3, price_);
       }
-      if (java.lang.Float.floatToRawIntBits(boostCeof_) != 0) {
+      if (boostCeof_ != 0F) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(4, boostCeof_);
       }
@@ -26843,8 +26540,6 @@ volcengine.byteair.protocol.VolcengineByteair.StringArray defaultValue);
        * </pre>
        *
        * <code>int64 goodsId = 1 [deprecated = true];</code>
-       * @deprecated bytedance.volcengine.byteair.SearchGoods.goodsId is deprecated.
-       *     See volcengine_byteair.proto;l=354
        * @return The goodsId.
        */
       @java.lang.Override
@@ -26858,8 +26553,6 @@ volcengine.byteair.protocol.VolcengineByteair.StringArray defaultValue);
        * </pre>
        *
        * <code>int64 goodsId = 1 [deprecated = true];</code>
-       * @deprecated bytedance.volcengine.byteair.SearchGoods.goodsId is deprecated.
-       *     See volcengine_byteair.proto;l=354
        * @param value The goodsId to set.
        * @return This builder for chaining.
        */
@@ -26876,8 +26569,6 @@ volcengine.byteair.protocol.VolcengineByteair.StringArray defaultValue);
        * </pre>
        *
        * <code>int64 goodsId = 1 [deprecated = true];</code>
-       * @deprecated bytedance.volcengine.byteair.SearchGoods.goodsId is deprecated.
-       *     See volcengine_byteair.proto;l=354
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearGoodsId() {
@@ -27206,11 +26897,9 @@ volcengine.byteair.protocol.VolcengineByteair.StringArray defaultValue);
      * <code>map&lt;string, string&gt; extra = 100;</code>
      */
 
-    /* nullable */
-java.lang.String getExtraOrDefault(
+    java.lang.String getExtraOrDefault(
         java.lang.String key,
-        /* nullable */
-java.lang.String defaultValue);
+        java.lang.String defaultValue);
     /**
      * <pre>
      * Optional.
@@ -27305,8 +26994,6 @@ java.lang.String defaultValue);
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -27427,7 +27114,7 @@ java.lang.String defaultValue);
     @java.lang.Override
     public boolean containsExtra(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetExtra().getMap().containsKey(key);
     }
     /**
@@ -27466,7 +27153,7 @@ java.lang.String defaultValue);
     public java.lang.String getExtraOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetExtra().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -27484,7 +27171,7 @@ java.lang.String defaultValue);
 
     public java.lang.String getExtraOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetExtra().getMap();
       if (!map.containsKey(key)) {
@@ -27507,7 +27194,7 @@ java.lang.String defaultValue);
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+      if (!getIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -27525,7 +27212,7 @@ java.lang.String defaultValue);
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+      if (!getIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -27990,7 +27677,7 @@ java.lang.String defaultValue);
       @java.lang.Override
       public boolean containsExtra(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         return internalGetExtra().getMap().containsKey(key);
       }
       /**
@@ -28029,7 +27716,7 @@ java.lang.String defaultValue);
       public java.lang.String getExtraOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetExtra().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -28047,7 +27734,7 @@ java.lang.String defaultValue);
 
       public java.lang.String getExtraOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetExtra().getMap();
         if (!map.containsKey(key)) {
@@ -28073,7 +27760,7 @@ java.lang.String defaultValue);
 
       public Builder removeExtra(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableExtra().getMutableMap()
             .remove(key);
         return this;
@@ -28098,11 +27785,8 @@ java.lang.String defaultValue);
       public Builder putExtra(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableExtra().getMutableMap()
             .put(key, value);
         return this;
@@ -28250,11 +27934,9 @@ java.lang.String defaultValue);
      * <code>map&lt;string, string&gt; extra = 100;</code>
      */
 
-    /* nullable */
-java.lang.String getExtraOrDefault(
+    java.lang.String getExtraOrDefault(
         java.lang.String key,
-        /* nullable */
-java.lang.String defaultValue);
+        java.lang.String defaultValue);
     /**
      * <pre>
      * Optional.
@@ -28345,8 +28027,6 @@ java.lang.String defaultValue);
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -28467,7 +28147,7 @@ java.lang.String defaultValue);
     @java.lang.Override
     public boolean containsExtra(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetExtra().getMap().containsKey(key);
     }
     /**
@@ -28506,7 +28186,7 @@ java.lang.String defaultValue);
     public java.lang.String getExtraOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetExtra().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -28524,7 +28204,7 @@ java.lang.String defaultValue);
 
     public java.lang.String getExtraOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetExtra().getMap();
       if (!map.containsKey(key)) {
@@ -28547,7 +28227,7 @@ java.lang.String defaultValue);
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+      if (!getIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -28565,7 +28245,7 @@ java.lang.String defaultValue);
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+      if (!getIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -29026,7 +28706,7 @@ java.lang.String defaultValue);
       @java.lang.Override
       public boolean containsExtra(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         return internalGetExtra().getMap().containsKey(key);
       }
       /**
@@ -29065,7 +28745,7 @@ java.lang.String defaultValue);
       public java.lang.String getExtraOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetExtra().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -29083,7 +28763,7 @@ java.lang.String defaultValue);
 
       public java.lang.String getExtraOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetExtra().getMap();
         if (!map.containsKey(key)) {
@@ -29109,7 +28789,7 @@ java.lang.String defaultValue);
 
       public Builder removeExtra(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableExtra().getMutableMap()
             .remove(key);
         return this;
@@ -29134,11 +28814,8 @@ java.lang.String defaultValue);
       public Builder putExtra(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableExtra().getMutableMap()
             .put(key, value);
         return this;
@@ -29408,8 +29085,6 @@ java.lang.String defaultValue);
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -29620,13 +29295,13 @@ java.lang.String defaultValue);
       if (code_ != 0) {
         output.writeInt32(1, code_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(message_)) {
+      if (!getMessageBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, message_);
       }
       if (value_ != null) {
         output.writeMessage(3, getValue());
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestId_)) {
+      if (!getRequestIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, requestId_);
       }
       if (success_ != false) {
@@ -29645,14 +29320,14 @@ java.lang.String defaultValue);
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(1, code_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(message_)) {
+      if (!getMessageBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, message_);
       }
       if (value_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getValue());
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestId_)) {
+      if (!getRequestIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, requestId_);
       }
       if (success_ != false) {
@@ -30603,11 +30278,9 @@ java.lang.String defaultValue);
      * <code>map&lt;string, string&gt; extra = 2;</code>
      */
 
-    /* nullable */
-java.lang.String getExtraOrDefault(
+    java.lang.String getExtraOrDefault(
         java.lang.String key,
-        /* nullable */
-java.lang.String defaultValue);
+        java.lang.String defaultValue);
     /**
      * <pre>
      * Output only.
@@ -30718,8 +30391,6 @@ java.lang.String defaultValue);
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -30859,7 +30530,7 @@ java.lang.String defaultValue);
     @java.lang.Override
     public boolean containsExtra(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetExtra().getMap().containsKey(key);
     }
     /**
@@ -30896,7 +30567,7 @@ java.lang.String defaultValue);
     public java.lang.String getExtraOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetExtra().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -30913,7 +30584,7 @@ java.lang.String defaultValue);
 
     public java.lang.String getExtraOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetExtra().getMap();
       if (!map.containsKey(key)) {
@@ -31716,7 +31387,7 @@ java.lang.String defaultValue);
       @java.lang.Override
       public boolean containsExtra(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         return internalGetExtra().getMap().containsKey(key);
       }
       /**
@@ -31753,7 +31424,7 @@ java.lang.String defaultValue);
       public java.lang.String getExtraOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetExtra().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -31770,7 +31441,7 @@ java.lang.String defaultValue);
 
       public java.lang.String getExtraOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetExtra().getMap();
         if (!map.containsKey(key)) {
@@ -31795,7 +31466,7 @@ java.lang.String defaultValue);
 
       public Builder removeExtra(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableExtra().getMutableMap()
             .remove(key);
         return this;
@@ -31819,11 +31490,8 @@ java.lang.String defaultValue);
       public Builder putExtra(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableExtra().getMutableMap()
             .put(key, value);
         return this;
@@ -32051,11 +31719,9 @@ java.lang.String defaultValue);
      * <code>map&lt;string, string&gt; extra = 5;</code>
      */
 
-    /* nullable */
-java.lang.String getExtraOrDefault(
+    java.lang.String getExtraOrDefault(
         java.lang.String key,
-        /* nullable */
-java.lang.String defaultValue);
+        java.lang.String defaultValue);
     /**
      * <pre>
      * Output only.
@@ -32157,8 +31823,6 @@ java.lang.String defaultValue);
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -32342,7 +32006,7 @@ java.lang.String defaultValue);
     @java.lang.Override
     public boolean containsExtra(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetExtra().getMap().containsKey(key);
     }
     /**
@@ -32379,7 +32043,7 @@ java.lang.String defaultValue);
     public java.lang.String getExtraOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetExtra().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -32396,7 +32060,7 @@ java.lang.String defaultValue);
 
     public java.lang.String getExtraOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetExtra().getMap();
       if (!map.containsKey(key)) {
@@ -32419,13 +32083,13 @@ java.lang.String defaultValue);
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+      if (!getIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
       if (rank_ != 0) {
         output.writeInt32(3, rank_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transData_)) {
+      if (!getTransDataBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, transData_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -32443,14 +32107,14 @@ java.lang.String defaultValue);
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+      if (!getIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
       if (rank_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(3, rank_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transData_)) {
+      if (!getTransDataBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, transData_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -33078,7 +32742,7 @@ java.lang.String defaultValue);
       @java.lang.Override
       public boolean containsExtra(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         return internalGetExtra().getMap().containsKey(key);
       }
       /**
@@ -33115,7 +32779,7 @@ java.lang.String defaultValue);
       public java.lang.String getExtraOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetExtra().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -33132,7 +32796,7 @@ java.lang.String defaultValue);
 
       public java.lang.String getExtraOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetExtra().getMap();
         if (!map.containsKey(key)) {
@@ -33157,7 +32821,7 @@ java.lang.String defaultValue);
 
       public Builder removeExtra(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableExtra().getMutableMap()
             .remove(key);
         return this;
@@ -33181,11 +32845,8 @@ java.lang.String defaultValue);
       public Builder putExtra(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableExtra().getMutableMap()
             .put(key, value);
         return this;
@@ -33450,11 +33111,9 @@ java.lang.String defaultValue);
      * <code>map&lt;string, string&gt; extra = 100;</code>
      */
 
-    /* nullable */
-java.lang.String getExtraOrDefault(
+    java.lang.String getExtraOrDefault(
         java.lang.String key,
-        /* nullable */
-java.lang.String defaultValue);
+        java.lang.String defaultValue);
     /**
      * <pre>
      * optional.
@@ -33581,8 +33240,6 @@ java.lang.String defaultValue);
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -33906,7 +33563,7 @@ java.lang.String defaultValue);
     @java.lang.Override
     public boolean containsExtra(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetExtra().getMap().containsKey(key);
     }
     /**
@@ -33943,7 +33600,7 @@ java.lang.String defaultValue);
     public java.lang.String getExtraOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetExtra().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -33960,7 +33617,7 @@ java.lang.String defaultValue);
 
     public java.lang.String getExtraOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetExtra().getMap();
       if (!map.containsKey(key)) {
@@ -33983,16 +33640,16 @@ java.lang.String defaultValue);
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uid_)) {
+      if (!getUidBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, uid_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scene_)) {
+      if (!getSceneBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, scene_);
       }
       for (int i = 0; i < items_.size(); i++) {
         output.writeMessage(3, items_.get(i));
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(predictRequestId_)) {
+      if (!getPredictRequestIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, predictRequestId_);
       }
       if (context_ != null) {
@@ -34013,17 +33670,17 @@ java.lang.String defaultValue);
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uid_)) {
+      if (!getUidBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, uid_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scene_)) {
+      if (!getSceneBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, scene_);
       }
       for (int i = 0; i < items_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, items_.get(i));
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(predictRequestId_)) {
+      if (!getPredictRequestIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, predictRequestId_);
       }
       if (context_ != null) {
@@ -35272,7 +34929,7 @@ java.lang.String defaultValue);
       @java.lang.Override
       public boolean containsExtra(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         return internalGetExtra().getMap().containsKey(key);
       }
       /**
@@ -35309,7 +34966,7 @@ java.lang.String defaultValue);
       public java.lang.String getExtraOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetExtra().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -35326,7 +34983,7 @@ java.lang.String defaultValue);
 
       public java.lang.String getExtraOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetExtra().getMap();
         if (!map.containsKey(key)) {
@@ -35351,7 +35008,7 @@ java.lang.String defaultValue);
 
       public Builder removeExtra(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableExtra().getMutableMap()
             .remove(key);
         return this;
@@ -35375,11 +35032,8 @@ java.lang.String defaultValue);
       public Builder putExtra(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableExtra().getMutableMap()
             .put(key, value);
         return this;
@@ -35611,8 +35265,6 @@ java.lang.String defaultValue);
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -35804,13 +35456,13 @@ java.lang.String defaultValue);
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+      if (!getIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pos_)) {
+      if (!getPosBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, pos_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(extra_)) {
+      if (!getExtraBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, extra_);
       }
       unknownFields.writeTo(output);
@@ -35822,13 +35474,13 @@ java.lang.String defaultValue);
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+      if (!getIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pos_)) {
+      if (!getPosBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, pos_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(extra_)) {
+      if (!getExtraBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, extra_);
       }
       size += unknownFields.getSerializedSize();
@@ -36594,11 +36246,9 @@ java.lang.String defaultValue);
      * <code>map&lt;string, string&gt; extra = 100;</code>
      */
 
-    /* nullable */
-java.lang.String getExtraOrDefault(
+    java.lang.String getExtraOrDefault(
         java.lang.String key,
-        /* nullable */
-java.lang.String defaultValue);
+        java.lang.String defaultValue);
     /**
      * <pre>
      * more info
@@ -36694,8 +36344,6 @@ java.lang.String defaultValue);
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -36839,7 +36487,7 @@ java.lang.String defaultValue);
     @java.lang.Override
     public boolean containsExtra(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetExtra().getMap().containsKey(key);
     }
     /**
@@ -36874,7 +36522,7 @@ java.lang.String defaultValue);
     public java.lang.String getExtraOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetExtra().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -36890,7 +36538,7 @@ java.lang.String defaultValue);
 
     public java.lang.String getExtraOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetExtra().getMap();
       if (!map.containsKey(key)) {
@@ -36913,7 +36561,7 @@ java.lang.String defaultValue);
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(spm_)) {
+      if (!getSpmBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, spm_);
       }
       if (reqType_ != volcengine.byteair.protocol.VolcengineByteair.CallbackReqType.byte_scene.getNumber()) {
@@ -36934,7 +36582,7 @@ java.lang.String defaultValue);
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(spm_)) {
+      if (!getSpmBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, spm_);
       }
       if (reqType_ != volcengine.byteair.protocol.VolcengineByteair.CallbackReqType.byte_scene.getNumber()) {
@@ -37475,7 +37123,7 @@ java.lang.String defaultValue);
       @java.lang.Override
       public boolean containsExtra(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         return internalGetExtra().getMap().containsKey(key);
       }
       /**
@@ -37510,7 +37158,7 @@ java.lang.String defaultValue);
       public java.lang.String getExtraOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetExtra().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -37526,7 +37174,7 @@ java.lang.String defaultValue);
 
       public java.lang.String getExtraOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetExtra().getMap();
         if (!map.containsKey(key)) {
@@ -37550,7 +37198,7 @@ java.lang.String defaultValue);
 
       public Builder removeExtra(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableExtra().getMutableMap()
             .remove(key);
         return this;
@@ -37573,11 +37221,8 @@ java.lang.String defaultValue);
       public Builder putExtra(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableExtra().getMutableMap()
             .put(key, value);
         return this;
@@ -37772,8 +37417,6 @@ java.lang.String defaultValue);
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -37894,7 +37537,7 @@ java.lang.String defaultValue);
       if (code_ != 0) {
         output.writeInt32(1, code_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(message_)) {
+      if (!getMessageBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, message_);
       }
       if (success_ != false) {
@@ -37913,7 +37556,7 @@ java.lang.String defaultValue);
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(1, code_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(message_)) {
+      if (!getMessageBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, message_);
       }
       if (success_ != false) {
@@ -38566,8 +38209,6 @@ java.lang.String defaultValue);
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -39215,8 +38856,6 @@ java.lang.String defaultValue);
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -39832,8 +39471,6 @@ java.lang.String defaultValue);
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -40446,8 +40083,6 @@ java.lang.String defaultValue);
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -41281,169 +40916,169 @@ java.lang.String defaultValue);
       "\001(\t\022\021\n\tloginMode\030\t \001(\t\022\017\n\007country\030\n \001(\t\022" +
       "C\n\005extra\030d \003(\01324.bytedance.volcengine.by" +
       "teair.PredictUser.ExtraEntry\032,\n\nExtraEnt" +
-      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\330\001\n\rP" +
+      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\310\001\n\rP" +
       "redictDevice\022\020\n\010deviceId\030\001 \001(\t\022\020\n\010platfo" +
       "rm\030\002 \001(\t\022\024\n\014deviceVendor\030\003 \001(\t\022\023\n\013device" +
       "Model\030\004 \001(\t\022\030\n\020deviceResolution\030\005 \001(\t\022\025\n" +
       "\rclientVersion\030\006 \001(\t\022\021\n\tosVersion\030\007 \001(\t\022" +
-      "\023\n\013networkType\030\010 \001(\t\022\017\n\007carrier\030\t \001(\t\022\016\n" +
-      "\006osType\030\n \001(\t\"\263\002\n\016PredictContext\022\013\n\003spm\030" +
-      "\001 \001(\t\022\"\n\032closePersonalizedRecommend\030\002 \001(" +
-      "\010\022=\n\007feature\030\003 \001(\0132,.bytedance.volcengin" +
-      "e.byteair.PredictFeature\022;\n\006filter\030\004 \001(\013" +
-      "2+.bytedance.volcengine.byteair.PredictF" +
-      "ilter\022F\n\005extra\030d \003(\01327.bytedance.volceng" +
-      "ine.byteair.PredictContext.ExtraEntry\032,\n" +
-      "\nExtraEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
-      "\0028\001\"\314\n\n\016PredictFeature\022V\n\rstringFeature\030" +
-      "\001 \003(\0132?.bytedance.volcengine.byteair.Pre" +
-      "dictFeature.StringFeatureEntry\022P\n\nintFea" +
-      "ture\030\002 \003(\0132<.bytedance.volcengine.byteai" +
-      "r.PredictFeature.IntFeatureEntry\022T\n\014floa" +
-      "tFeature\030\003 \003(\0132>.bytedance.volcengine.by" +
-      "teair.PredictFeature.FloatFeatureEntry\022V" +
-      "\n\rdoubleFeature\030\004 \003(\0132?.bytedance.volcen" +
-      "gine.byteair.PredictFeature.DoubleFeatur" +
-      "eEntry\022`\n\022stringArrayFeature\030\005 \003(\0132D.byt" +
+      "\023\n\013networkType\030\010 \001(\t\022\017\n\007carrier\030\t \001(\t\"\263\002" +
+      "\n\016PredictContext\022\013\n\003spm\030\001 \001(\t\022\"\n\032closePe" +
+      "rsonalizedRecommend\030\002 \001(\010\022=\n\007feature\030\003 \001" +
+      "(\0132,.bytedance.volcengine.byteair.Predic" +
+      "tFeature\022;\n\006filter\030\004 \001(\0132+.bytedance.vol" +
+      "cengine.byteair.PredictFilter\022F\n\005extra\030d" +
+      " \003(\01327.bytedance.volcengine.byteair.Pred" +
+      "ictContext.ExtraEntry\032,\n\nExtraEntry\022\013\n\003k" +
+      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\314\n\n\016PredictF" +
+      "eature\022V\n\rstringFeature\030\001 \003(\0132?.bytedanc" +
+      "e.volcengine.byteair.PredictFeature.Stri" +
+      "ngFeatureEntry\022P\n\nintFeature\030\002 \003(\0132<.byt" +
       "edance.volcengine.byteair.PredictFeature" +
-      ".StringArrayFeatureEntry\022Z\n\017intArrayFeat" +
-      "ure\030\006 \003(\0132A.bytedance.volcengine.byteair" +
-      ".PredictFeature.IntArrayFeatureEntry\022^\n\021" +
-      "floatArrayFeature\030\007 \003(\0132C.bytedance.volc" +
-      "engine.byteair.PredictFeature.FloatArray" +
-      "FeatureEntry\022`\n\022doubleArrayFeature\030\010 \003(\013" +
-      "2D.bytedance.volcengine.byteair.PredictF" +
-      "eature.DoubleArrayFeatureEntry\0324\n\022String" +
-      "FeatureEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
-      ":\0028\001\0321\n\017IntFeatureEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
-      "value\030\002 \001(\003:\0028\001\0323\n\021FloatFeatureEntry\022\013\n\003" +
-      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\002:\0028\001\0324\n\022DoubleFe" +
-      "atureEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\001:\002" +
-      "8\001\032d\n\027StringArrayFeatureEntry\022\013\n\003key\030\001 \001" +
+      ".IntFeatureEntry\022T\n\014floatFeature\030\003 \003(\0132>" +
+      ".bytedance.volcengine.byteair.PredictFea" +
+      "ture.FloatFeatureEntry\022V\n\rdoubleFeature\030" +
+      "\004 \003(\0132?.bytedance.volcengine.byteair.Pre" +
+      "dictFeature.DoubleFeatureEntry\022`\n\022string" +
+      "ArrayFeature\030\005 \003(\0132D.bytedance.volcengin" +
+      "e.byteair.PredictFeature.StringArrayFeat" +
+      "ureEntry\022Z\n\017intArrayFeature\030\006 \003(\0132A.byte" +
+      "dance.volcengine.byteair.PredictFeature." +
+      "IntArrayFeatureEntry\022^\n\021floatArrayFeatur" +
+      "e\030\007 \003(\0132C.bytedance.volcengine.byteair.P" +
+      "redictFeature.FloatArrayFeatureEntry\022`\n\022" +
+      "doubleArrayFeature\030\010 \003(\0132D.bytedance.vol" +
+      "cengine.byteair.PredictFeature.DoubleArr" +
+      "ayFeatureEntry\0324\n\022StringFeatureEntry\022\013\n\003" +
+      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0321\n\017IntFeatu" +
+      "reEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\003:\0028\001\032" +
+      "3\n\021FloatFeatureEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
+      "ue\030\002 \001(\002:\0028\001\0324\n\022DoubleFeatureEntry\022\013\n\003ke" +
+      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\001:\0028\001\032d\n\027StringArra" +
+      "yFeatureEntry\022\013\n\003key\030\001 \001(\t\0228\n\005value\030\002 \001(" +
+      "\0132).bytedance.volcengine.byteair.StringA" +
+      "rray:\0028\001\032^\n\024IntArrayFeatureEntry\022\013\n\003key\030" +
+      "\001 \001(\t\0225\n\005value\030\002 \001(\0132&.bytedance.volceng" +
+      "ine.byteair.IntArray:\0028\001\032b\n\026FloatArrayFe" +
+      "atureEntry\022\013\n\003key\030\001 \001(\t\0227\n\005value\030\002 \001(\0132(" +
+      ".bytedance.volcengine.byteair.FloatArray" +
+      ":\0028\001\032d\n\027DoubleArrayFeatureEntry\022\013\n\003key\030\001" +
+      " \001(\t\0228\n\005value\030\002 \001(\0132).bytedance.volcengi" +
+      "ne.byteair.DoubleArray:\0028\001\"\253\n\n\rPredictFi" +
+      "lter\022S\n\014stringFilter\030\001 \003(\0132=.bytedance.v" +
+      "olcengine.byteair.PredictFilter.StringFi" +
+      "lterEntry\022M\n\tintFilter\030\002 \003(\0132:.bytedance" +
+      ".volcengine.byteair.PredictFilter.IntFil" +
+      "terEntry\022Q\n\013floatFilter\030\003 \003(\0132<.bytedanc" +
+      "e.volcengine.byteair.PredictFilter.Float" +
+      "FilterEntry\022S\n\014doubleFilter\030\004 \003(\0132=.byte" +
+      "dance.volcengine.byteair.PredictFilter.D" +
+      "oubleFilterEntry\022]\n\021stringArrayFilter\030\005 " +
+      "\003(\0132B.bytedance.volcengine.byteair.Predi" +
+      "ctFilter.StringArrayFilterEntry\022W\n\016intAr" +
+      "rayFilter\030\006 \003(\0132?.bytedance.volcengine.b" +
+      "yteair.PredictFilter.IntArrayFilterEntry" +
+      "\022[\n\020floatArrayFilter\030\007 \003(\0132A.bytedance.v" +
+      "olcengine.byteair.PredictFilter.FloatArr" +
+      "ayFilterEntry\022]\n\021doubleArrayFilter\030\010 \003(\013" +
+      "2B.bytedance.volcengine.byteair.PredictF" +
+      "ilter.DoubleArrayFilterEntry\0323\n\021StringFi" +
+      "lterEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
+      "\001\0320\n\016IntFilterEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
+      "e\030\002 \001(\003:\0028\001\0322\n\020FloatFilterEntry\022\013\n\003key\030\001" +
+      " \001(\t\022\r\n\005value\030\002 \001(\002:\0028\001\0323\n\021DoubleFilterE" +
+      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\001:\0028\001\032c\n\026" +
+      "StringArrayFilterEntry\022\013\n\003key\030\001 \001(\t\0228\n\005v" +
+      "alue\030\002 \001(\0132).bytedance.volcengine.byteai" +
+      "r.StringArray:\0028\001\032]\n\023IntArrayFilterEntry" +
+      "\022\013\n\003key\030\001 \001(\t\0225\n\005value\030\002 \001(\0132&.bytedance" +
+      ".volcengine.byteair.IntArray:\0028\001\032a\n\025Floa" +
+      "tArrayFilterEntry\022\013\n\003key\030\001 \001(\t\0227\n\005value\030" +
+      "\002 \001(\0132(.bytedance.volcengine.byteair.Flo" +
+      "atArray:\0028\001\032c\n\026DoubleArrayFilterEntry\022\013\n" +
+      "\003key\030\001 \001(\t\0228\n\005value\030\002 \001(\0132).bytedance.vo" +
+      "lcengine.byteair.DoubleArray:\0028\001\"\320\001\n\024Pre" +
+      "dictCandidateItem\022\n\n\002id\030\001 \001(\t\022\r\n\005score\030\002" +
+      " \001(\001\022\r\n\005price\030\003 \001(\001\022\022\n\nboost_coef\030\004 \001(\001\022" +
+      "L\n\005extra\030d \003(\0132=.bytedance.volcengine.by" +
+      "teair.PredictCandidateItem.ExtraEntry\032,\n" +
+      "\nExtraEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
+      "\0028\001\"\225\001\n\014PredictExtra\022\021\n\tinnerTest\030\001 \001(\010\022" +
+      "D\n\005extra\030e \003(\01325.bytedance.volcengine.by" +
+      "teair.PredictExtra.ExtraEntry\032,\n\nExtraEn" +
+      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\232\001\n\022" +
+      "PredictRelatedItem\022\n\n\002id\030\001 \001(\t\022J\n\005extra\030" +
+      "d \003(\0132;.bytedance.volcengine.byteair.Pre" +
+      "dictRelatedItem.ExtraEntry\032,\n\nExtraEntry" +
+      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\375\003\n\nSea" +
+      "rchInfo\022\r\n\005start\030\001 \001(\005\022\022\n\nsearchType\030\002 \001" +
+      "(\005\022\020\n\010sortMode\030\003 \001(\005\022\020\n\010sortType\030\004 \001(\005\022\017" +
+      "\n\007content\030\005 \001(\t\022\r\n\005query\030\006 \001(\t\022F\n\007filter" +
+      "s\030\007 \003(\01325.bytedance.volcengine.byteair.S" +
+      "earchInfo.FiltersEntry\022J\n\tfilterOut\030\010 \003(" +
+      "\01327.bytedance.volcengine.byteair.SearchI" +
+      "nfo.FilterOutEntry\022<\n\tgoodsList\030\t \003(\0132)." +
+      "bytedance.volcengine.byteair.SearchGoods" +
+      "\032Y\n\014FiltersEntry\022\013\n\003key\030\001 \001(\t\0228\n\005value\030\002" +
+      " \001(\0132).bytedance.volcengine.byteair.Stri" +
+      "ngArray:\0028\001\032[\n\016FilterOutEntry\022\013\n\003key\030\001 \001" +
       "(\t\0228\n\005value\030\002 \001(\0132).bytedance.volcengine" +
-      ".byteair.StringArray:\0028\001\032^\n\024IntArrayFeat" +
-      "ureEntry\022\013\n\003key\030\001 \001(\t\0225\n\005value\030\002 \001(\0132&.b" +
-      "ytedance.volcengine.byteair.IntArray:\0028\001" +
-      "\032b\n\026FloatArrayFeatureEntry\022\013\n\003key\030\001 \001(\t\022" +
-      "7\n\005value\030\002 \001(\0132(.bytedance.volcengine.by" +
-      "teair.FloatArray:\0028\001\032d\n\027DoubleArrayFeatu" +
-      "reEntry\022\013\n\003key\030\001 \001(\t\0228\n\005value\030\002 \001(\0132).by" +
-      "tedance.volcengine.byteair.DoubleArray:\002" +
-      "8\001\"\253\n\n\rPredictFilter\022S\n\014stringFilter\030\001 \003" +
-      "(\0132=.bytedance.volcengine.byteair.Predic" +
-      "tFilter.StringFilterEntry\022M\n\tintFilter\030\002" +
-      " \003(\0132:.bytedance.volcengine.byteair.Pred" +
-      "ictFilter.IntFilterEntry\022Q\n\013floatFilter\030" +
-      "\003 \003(\0132<.bytedance.volcengine.byteair.Pre" +
-      "dictFilter.FloatFilterEntry\022S\n\014doubleFil" +
-      "ter\030\004 \003(\0132=.bytedance.volcengine.byteair" +
-      ".PredictFilter.DoubleFilterEntry\022]\n\021stri" +
-      "ngArrayFilter\030\005 \003(\0132B.bytedance.volcengi" +
-      "ne.byteair.PredictFilter.StringArrayFilt" +
-      "erEntry\022W\n\016intArrayFilter\030\006 \003(\0132?.byteda" +
-      "nce.volcengine.byteair.PredictFilter.Int" +
-      "ArrayFilterEntry\022[\n\020floatArrayFilter\030\007 \003" +
-      "(\0132A.bytedance.volcengine.byteair.Predic" +
-      "tFilter.FloatArrayFilterEntry\022]\n\021doubleA" +
-      "rrayFilter\030\010 \003(\0132B.bytedance.volcengine." +
-      "byteair.PredictFilter.DoubleArrayFilterE" +
-      "ntry\0323\n\021StringFilterEntry\022\013\n\003key\030\001 \001(\t\022\r" +
-      "\n\005value\030\002 \001(\t:\0028\001\0320\n\016IntFilterEntry\022\013\n\003k" +
-      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\003:\0028\001\0322\n\020FloatFilt" +
-      "erEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\002:\0028\001\032" +
-      "3\n\021DoubleFilterEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
-      "ue\030\002 \001(\001:\0028\001\032c\n\026StringArrayFilterEntry\022\013" +
-      "\n\003key\030\001 \001(\t\0228\n\005value\030\002 \001(\0132).bytedance.v" +
-      "olcengine.byteair.StringArray:\0028\001\032]\n\023Int" +
-      "ArrayFilterEntry\022\013\n\003key\030\001 \001(\t\0225\n\005value\030\002" +
-      " \001(\0132&.bytedance.volcengine.byteair.IntA" +
-      "rray:\0028\001\032a\n\025FloatArrayFilterEntry\022\013\n\003key" +
-      "\030\001 \001(\t\0227\n\005value\030\002 \001(\0132(.bytedance.volcen" +
-      "gine.byteair.FloatArray:\0028\001\032c\n\026DoubleArr" +
-      "ayFilterEntry\022\013\n\003key\030\001 \001(\t\0228\n\005value\030\002 \001(" +
-      "\0132).bytedance.volcengine.byteair.DoubleA" +
-      "rray:\0028\001\"\320\001\n\024PredictCandidateItem\022\n\n\002id\030" +
-      "\001 \001(\t\022\r\n\005score\030\002 \001(\001\022\r\n\005price\030\003 \001(\001\022\022\n\nb" +
-      "oost_coef\030\004 \001(\001\022L\n\005extra\030d \003(\0132=.bytedan" +
-      "ce.volcengine.byteair.PredictCandidateIt" +
-      "em.ExtraEntry\032,\n\nExtraEntry\022\013\n\003key\030\001 \001(\t" +
-      "\022\r\n\005value\030\002 \001(\t:\0028\001\"\225\001\n\014PredictExtra\022\021\n\t" +
-      "innerTest\030\001 \001(\010\022D\n\005extra\030e \003(\01325.bytedan" +
-      "ce.volcengine.byteair.PredictExtra.Extra" +
-      "Entry\032,\n\nExtraEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
-      "e\030\002 \001(\t:\0028\001\"\232\001\n\022PredictRelatedItem\022\n\n\002id" +
-      "\030\001 \001(\t\022J\n\005extra\030d \003(\0132;.bytedance.volcen" +
-      "gine.byteair.PredictRelatedItem.ExtraEnt" +
-      "ry\032,\n\nExtraEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
-      " \001(\t:\0028\001\"\375\003\n\nSearchInfo\022\r\n\005start\030\001 \001(\005\022\022" +
-      "\n\nsearchType\030\002 \001(\005\022\020\n\010sortMode\030\003 \001(\005\022\020\n\010" +
-      "sortType\030\004 \001(\005\022\017\n\007content\030\005 \001(\t\022\r\n\005query" +
-      "\030\006 \001(\t\022F\n\007filters\030\007 \003(\01325.bytedance.volc" +
-      "engine.byteair.SearchInfo.FiltersEntry\022J" +
-      "\n\tfilterOut\030\010 \003(\01327.bytedance.volcengine" +
-      ".byteair.SearchInfo.FilterOutEntry\022<\n\tgo" +
-      "odsList\030\t \003(\0132).bytedance.volcengine.byt" +
-      "eair.SearchGoods\032Y\n\014FiltersEntry\022\013\n\003key\030" +
-      "\001 \001(\t\0228\n\005value\030\002 \001(\0132).bytedance.volceng" +
-      "ine.byteair.StringArray:\0028\001\032[\n\016FilterOut" +
-      "Entry\022\013\n\003key\030\001 \001(\t\0228\n\005value\030\002 \001(\0132).byte" +
-      "dance.volcengine.byteair.StringArray:\0028\001" +
-      "\"X\n\013SearchGoods\022\023\n\007goodsId\030\001 \001(\003B\002\030\001\022\022\n\n" +
-      "goodsIdStr\030\002 \001(\t\022\r\n\005price\030\003 \001(\002\022\021\n\tboost" +
-      "Ceof\030\004 \001(\002\"\230\001\n\021PredictParentItem\022\n\n\002id\030\001" +
-      " \001(\t\022I\n\005extra\030d \003(\0132:.bytedance.volcengi" +
-      "ne.byteair.PredictParentItem.ExtraEntry\032" +
-      ",\n\nExtraEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\t:\0028\001\"\230\001\n\021PredictFilterItem\022\n\n\002id\030\001 \001(\t\022" +
-      "I\n\005extra\030d \003(\0132:.bytedance.volcengine.by" +
-      "teair.PredictFilterItem.ExtraEntry\032,\n\nEx" +
-      "traEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
-      "\"\221\001\n\017PredictResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007me" +
-      "ssage\030\002 \001(\t\022:\n\005value\030\003 \001(\0132+.bytedance.v" +
-      "olcengine.byteair.PredictResult\022\022\n\nreque" +
-      "st_id\030\004 \001(\t\022\017\n\007success\030\005 \001(\010\"\322\001\n\rPredict" +
-      "Result\0228\n\005items\030\001 \003(\0132).bytedance.volcen" +
-      "gine.byteair.PredictItem\022E\n\005extra\030\002 \003(\0132" +
-      "6.bytedance.volcengine.byteair.PredictRe" +
-      "sult.ExtraEntry\022\022\n\ntotalCount\030\003 \001(\005\032,\n\nE" +
+      ".byteair.StringArray:\0028\001\"X\n\013SearchGoods\022" +
+      "\023\n\007goodsId\030\001 \001(\003B\002\030\001\022\022\n\ngoodsIdStr\030\002 \001(\t" +
+      "\022\r\n\005price\030\003 \001(\002\022\021\n\tboostCeof\030\004 \001(\002\"\230\001\n\021P" +
+      "redictParentItem\022\n\n\002id\030\001 \001(\t\022I\n\005extra\030d " +
+      "\003(\0132:.bytedance.volcengine.byteair.Predi" +
+      "ctParentItem.ExtraEntry\032,\n\nExtraEntry\022\013\n" +
+      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\230\001\n\021Predic" +
+      "tFilterItem\022\n\n\002id\030\001 \001(\t\022I\n\005extra\030d \003(\0132:" +
+      ".bytedance.volcengine.byteair.PredictFil" +
+      "terItem.ExtraEntry\032,\n\nExtraEntry\022\013\n\003key\030" +
+      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\221\001\n\017PredictResp" +
+      "onse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022:\n\005v" +
+      "alue\030\003 \001(\0132+.bytedance.volcengine.byteai" +
+      "r.PredictResult\022\022\n\nrequest_id\030\004 \001(\t\022\017\n\007s" +
+      "uccess\030\005 \001(\010\"\322\001\n\rPredictResult\0228\n\005items\030" +
+      "\001 \003(\0132).bytedance.volcengine.byteair.Pre" +
+      "dictItem\022E\n\005extra\030\002 \003(\01326.bytedance.volc" +
+      "engine.byteair.PredictResult.ExtraEntry\022" +
+      "\022\n\ntotalCount\030\003 \001(\005\032,\n\nExtraEntry\022\013\n\003key" +
+      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\255\001\n\013PredictIte" +
+      "m\022\n\n\002id\030\001 \001(\t\022\014\n\004rank\030\003 \001(\005\022\021\n\ttransData" +
+      "\030\004 \001(\t\022C\n\005extra\030\005 \003(\01324.bytedance.volcen" +
+      "gine.byteair.PredictItem.ExtraEntry\032,\n\nE" +
       "xtraEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
-      "\001\"\255\001\n\013PredictItem\022\n\n\002id\030\001 \001(\t\022\014\n\004rank\030\003 " +
-      "\001(\005\022\021\n\ttransData\030\004 \001(\t\022C\n\005extra\030\005 \003(\01324." +
-      "bytedance.volcengine.byteair.PredictItem" +
-      ".ExtraEntry\032,\n\nExtraEntry\022\013\n\003key\030\001 \001(\t\022\r" +
-      "\n\005value\030\002 \001(\t:\0028\001\"\273\002\n\017CallbackRequest\022\013\n" +
-      "\003uid\030\001 \001(\t\022\r\n\005scene\030\002 \001(\t\0229\n\005items\030\003 \003(\013" +
-      "2*.bytedance.volcengine.byteair.Callback" +
-      "Item\022\032\n\022predict_request_id\030\004 \001(\t\022>\n\007cont" +
-      "ext\030\005 \001(\0132-.bytedance.volcengine.byteair" +
-      ".CallbackContext\022G\n\005extra\030d \003(\01328.byteda" +
-      "nce.volcengine.byteair.CallbackRequest.E" +
-      "xtraEntry\032,\n\nExtraEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
-      "value\030\002 \001(\t:\0028\001\"6\n\014CallbackItem\022\n\n\002id\030\001 " +
-      "\001(\t\022\013\n\003pos\030\002 \001(\t\022\r\n\005extra\030\003 \001(\t\"\326\001\n\017Call" +
-      "backContext\022\013\n\003spm\030\001 \001(\t\022?\n\010req_type\030\002 \001" +
-      "(\0162-.bytedance.volcengine.byteair.Callba" +
-      "ckReqType\022G\n\005extra\030d \003(\01328.bytedance.vol" +
-      "cengine.byteair.CallbackContext.ExtraEnt" +
-      "ry\032,\n\nExtraEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
-      " \001(\t:\0028\001\"B\n\020CallbackResponse\022\014\n\004code\030\001 \001" +
-      "(\005\022\017\n\007message\030\002 \001(\t\022\017\n\007success\030\003 \001(\010\"\035\n\013" +
-      "StringArray\022\016\n\006values\030\001 \003(\t\"\032\n\010IntArray\022" +
-      "\016\n\006values\030\001 \003(\003\"\034\n\nFloatArray\022\016\n\006values\030" +
-      "\001 \003(\002\"\035\n\013DoubleArray\022\016\n\006values\030\001 \003(\001*C\n\017" +
-      "CallbackReqType\022\016\n\nbyte_scene\020\000\022\022\n\016not_b" +
-      "yte_scene\020\001\022\014\n\010behavior\020\0022\221\003\n\030Volcengine" +
-      "GeneralService\022N\n\tWriteData\022\024.google.pro" +
-      "tobuf.Any\032+.bytedance.volcengine.byteair" +
-      ".WriteResponse\022R\n\nImportData\022\024.google.pr" +
-      "otobuf.Any\032..bytedance.volcengine.common" +
-      ".OperationResponse\022f\n\007Predict\022,.bytedanc" +
-      "e.volcengine.byteair.PredictRequest\032-.by" +
-      "tedance.volcengine.byteair.PredictRespon" +
-      "se\022i\n\010Callback\022-.bytedance.volcengine.by" +
-      "teair.CallbackRequest\032..bytedance.volcen" +
-      "gine.byteair.CallbackResponseB\035\n\033volceng" +
-      "ine.byteair.protocolb\006proto3"
+      "\001\"\273\002\n\017CallbackRequest\022\013\n\003uid\030\001 \001(\t\022\r\n\005sc" +
+      "ene\030\002 \001(\t\0229\n\005items\030\003 \003(\0132*.bytedance.vol" +
+      "cengine.byteair.CallbackItem\022\032\n\022predict_" +
+      "request_id\030\004 \001(\t\022>\n\007context\030\005 \001(\0132-.byte" +
+      "dance.volcengine.byteair.CallbackContext" +
+      "\022G\n\005extra\030d \003(\01328.bytedance.volcengine.b" +
+      "yteair.CallbackRequest.ExtraEntry\032,\n\nExt" +
+      "raEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"" +
+      "6\n\014CallbackItem\022\n\n\002id\030\001 \001(\t\022\013\n\003pos\030\002 \001(\t" +
+      "\022\r\n\005extra\030\003 \001(\t\"\326\001\n\017CallbackContext\022\013\n\003s" +
+      "pm\030\001 \001(\t\022?\n\010req_type\030\002 \001(\0162-.bytedance.v" +
+      "olcengine.byteair.CallbackReqType\022G\n\005ext" +
+      "ra\030d \003(\01328.bytedance.volcengine.byteair." +
+      "CallbackContext.ExtraEntry\032,\n\nExtraEntry" +
+      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"B\n\020Call" +
+      "backResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007message\030\002 " +
+      "\001(\t\022\017\n\007success\030\003 \001(\010\"\035\n\013StringArray\022\016\n\006v" +
+      "alues\030\001 \003(\t\"\032\n\010IntArray\022\016\n\006values\030\001 \003(\003\"" +
+      "\034\n\nFloatArray\022\016\n\006values\030\001 \003(\002\"\035\n\013DoubleA" +
+      "rray\022\016\n\006values\030\001 \003(\001*C\n\017CallbackReqType\022" +
+      "\016\n\nbyte_scene\020\000\022\022\n\016not_byte_scene\020\001\022\014\n\010b" +
+      "ehavior\020\0022\221\003\n\030VolcengineGeneralService\022N" +
+      "\n\tWriteData\022\024.google.protobuf.Any\032+.byte" +
+      "dance.volcengine.byteair.WriteResponse\022R" +
+      "\n\nImportData\022\024.google.protobuf.Any\032..byt" +
+      "edance.volcengine.common.OperationRespon" +
+      "se\022f\n\007Predict\022,.bytedance.volcengine.byt" +
+      "eair.PredictRequest\032-.bytedance.volcengi" +
+      "ne.byteair.PredictResponse\022i\n\010Callback\022-" +
+      ".bytedance.volcengine.byteair.CallbackRe" +
+      "quest\032..bytedance.volcengine.byteair.Cal" +
+      "lbackResponseB\035\n\033volcengine.byteair.prot" +
+      "ocolb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -41492,7 +41127,7 @@ java.lang.String defaultValue);
     internal_static_bytedance_volcengine_byteair_PredictDevice_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bytedance_volcengine_byteair_PredictDevice_descriptor,
-        new java.lang.String[] { "DeviceId", "Platform", "DeviceVendor", "DeviceModel", "DeviceResolution", "ClientVersion", "OsVersion", "NetworkType", "Carrier", "OsType", });
+        new java.lang.String[] { "DeviceId", "Platform", "DeviceVendor", "DeviceModel", "DeviceResolution", "ClientVersion", "OsVersion", "NetworkType", "Carrier", });
     internal_static_bytedance_volcengine_byteair_PredictContext_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_bytedance_volcengine_byteair_PredictContext_fieldAccessorTable = new
