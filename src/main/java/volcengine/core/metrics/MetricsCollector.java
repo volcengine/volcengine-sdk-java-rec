@@ -1,5 +1,6 @@
 package volcengine.core.metrics;
 
+import kotlin.jvm.Synchronized;
 import volcengine.core.BizException;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
@@ -26,7 +27,6 @@ public class MetricsCollector {
     private static final String[] timerStatMetrics = new String[]{
             "max", "min", "avg", "pct75", "pct90", "pct95", "pct99", "pct999"};
 
-
     public static void Init(MetricsOption... opts) {
         metricsCfg = new MetricsCfg();
         // apply options
@@ -34,10 +34,11 @@ public class MetricsCollector {
             opt.fill((metricsCfg));
         }
 
-        metricsCollector = new HashMap<>();
-        metricsCollector.put(MetricsType.metricsTypeStore, new HashMap<>());
-        metricsCollector.put(MetricsType.metricsTypeCounter, new HashMap<>());
-        metricsCollector.put(MetricsType.metricsTypeTimer, new HashMap<>());
+        Map<MetricsType, Map<String, MetricValue>> metricsCollectorTmp = new HashMap<>();
+        metricsCollectorTmp.put(MetricsType.metricsTypeStore, new HashMap<>());
+        metricsCollectorTmp.put(MetricsType.metricsTypeCounter, new HashMap<>());
+        metricsCollectorTmp.put(MetricsType.metricsTypeTimer, new HashMap<>());
+        metricsCollector = metricsCollectorTmp;
 
         httpCli = new OkHttpClient.Builder()
                 .connectTimeout(metricsCfg.httpTimeoutMs, TimeUnit.MILLISECONDS)
