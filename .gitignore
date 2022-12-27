@@ -131,3 +131,5 @@ volcengine-sdk-java-rec.iml
 target
 
 src/main/java/Example/
+node_modules
+package*.json
