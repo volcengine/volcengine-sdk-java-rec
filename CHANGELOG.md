@@ -1,4 +1,13 @@
-# [](https://code.byted.org/byteair/volcengine-sdk-java-rec/compare/v1.1.0...v) (2022-12-27)
+# [](https://code.byted.org/byteair/volcengine-sdk-java-rec/compare/v1.1.1...v) (2023-01-04)
+
+
+
+## [1.1.1](https://code.byted.org/byteair/volcengine-sdk-java-rec/compare/v1.1.0...v1.1.1) (2023-01-04)
+
+
+### Features
+
+* change default cn domain ([0afefe9](https://code.byted.org/byteair/volcengine-sdk-java-rec/commits/0afefe9233602d9ece473d012f4f32b83b0e8686))
 
 
 
