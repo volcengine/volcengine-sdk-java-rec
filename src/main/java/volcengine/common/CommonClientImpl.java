@@ -2,7 +2,6 @@ package volcengine.common;
 
 import volcengine.core.BizException;
 import volcengine.core.Context;
-import volcengine.core.HostAvailabler;
 import volcengine.core.HTTPCaller;
 import volcengine.core.NetException;
 import volcengine.core.Option;
@@ -24,25 +23,21 @@ public abstract class CommonClientImpl implements CommonClient, URLCenter {
 
     protected CommonURL commonURL;
 
-    private final HostAvailabler hostAvailabler;
-
     protected CommonClientImpl(Context.Param param) {
         this.context = new Context(param);
         this.httpCaller = new HTTPCaller(context);
         this.commonURL = new CommonURL(context);
-        this.hostAvailabler = new HostAvailabler(context, this);
     }
 
     @Override
-    public final void refresh(String host) {
-        this.commonURL.refresh(host);
-        doRefresh(host);
+    public final void refresh(List<String> hosts) {
+        this.commonURL.refresh(hosts);
+        doRefresh(hosts);
     }
 
-    public abstract void doRefresh(String host);
+    public abstract void doRefresh(List<String> host);
 
     public final void release() {
-        this.hostAvailabler.shutdown();
         doRelease();
     }
 
@@ -54,7 +49,8 @@ public abstract class CommonClientImpl implements CommonClient, URLCenter {
     public OperationResponse getOperation(
             GetOperationRequest request, Option... opts) throws NetException, BizException {
         Parser<OperationResponse> parser = OperationResponse.parser();
-        String url = commonURL.getGetOperationUrl();
+        int index = commonURL.getRandom().nextInt(commonURL.getGetOperationUrl().size());
+        String url = commonURL.getGetOperationUrl().get(index);
         OperationResponse response = httpCaller.doPBRequest(url, request, parser, Option.conv2Options(opts));
         log.debug("[volcengineSDK][GetOperations] rsp:\n{}", response);
         return response;
@@ -64,7 +60,8 @@ public abstract class CommonClientImpl implements CommonClient, URLCenter {
     public ListOperationsResponse listOperations(
             ListOperationsRequest request, Option... opts) throws NetException, BizException {
         Parser<ListOperationsResponse> parser = ListOperationsResponse.parser();
-        String url = commonURL.getListOperationsUrl();
+        int index = commonURL.getRandom().nextInt(commonURL.getListOperationsUrl().size());
+        String url = commonURL.getListOperationsUrl().get(index);
         ListOperationsResponse response = httpCaller.doPBRequest(url, request, parser, Option.conv2Options(opts));
         log.debug("[volcengineSDK][ListOperations] rsp:\n{}", response);
         return response;
@@ -76,7 +73,8 @@ public abstract class CommonClientImpl implements CommonClient, URLCenter {
         for (LocalDate date : dateList) {
             addDoneDate(dates, date);
         }
-        String urlFormat = commonURL.getDoneUrlFormat();
+        int index = commonURL.getRandom().nextInt(commonURL.getDoneUrlFormat().size());
+        String urlFormat = commonURL.getDoneUrlFormat().get(index);
         String url = urlFormat.replace("{}", topic);
         DoneRequest request = DoneRequest.newBuilder().addAllDataDates(dates).build();
         Parser<DoneResponse> parser = DoneResponse.parser();

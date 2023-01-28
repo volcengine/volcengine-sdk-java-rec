@@ -35,8 +35,7 @@ public class Context {
     // in order to ensure communication security, please use "HTTPS"
     private String schema = "https";
 
-    // Server address, china use "rec-b.volcengineapi.com",
-    // other area use "tob.sgsnssdk.com" in default
+    // Server address, china use "api.byteair.volces.com", sg use "byteair-api-sg1.byteintlapi.com".
     private List<String> hosts;
 
     // Customer-defined http headers, all requests will include these headers

@@ -4,6 +4,10 @@ import volcengine.core.Context;
 import volcengine.core.URLCenter;
 import lombok.Getter;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
 @Getter
 public class CommonURL implements URLCenter {
     // The URL format of operation information
@@ -16,30 +20,41 @@ public class CommonURL implements URLCenter {
 
     // The URL of getting operation information which is real-time
     // Example: https://tob.sgsnssdk.com/data/api/retail_demo/operation?method=get
-    private String getOperationUrl;
+    private List<String> getOperationUrl;
 
     // The URL of query operations information which is non-real-time
     // Example: https://tob.sgsnssdk.com/data/api/retail_demo/operation?method=list
-    private String listOperationsUrl;
+    private List<String> listOperationsUrl;
 
     // The URL of mark certain days that data synchronization is complete
     // Example: https://tob.sgsnssdk.com/data/api/retail_demo/done?topic=user
-    private String doneUrlFormat;
+    private List<String> doneUrlFormat;
 
     protected String schema;
 
     protected String tenant;
 
+    protected Random random;
+
     protected CommonURL(Context context) {
         this.schema = context.getSchema();
         this.tenant = context.getTenant();
-        this.refresh(context.getHosts().get(0));
+        this.refresh(context.getHosts());
+        this.random = new Random();
     }
 
     @Override
-    public void refresh(String host) {
-        getOperationUrl = String.format(OPERATION_URL_FORMAT, schema, host, tenant, "get");
-        listOperationsUrl = String.format(OPERATION_URL_FORMAT, schema, host, tenant, "list");
-        doneUrlFormat = String.format(DONE_URL_FORMAT, schema, host, tenant);
+    public void refresh(List<String> hosts) {
+        List<String> getOperationUrlTmp = new ArrayList<>();
+        List<String> listOperationsUrlTmp = new ArrayList<>();
+        List<String> doneUrlFormatTmp = new ArrayList<>();
+        for (String host : hosts) {
+            getOperationUrlTmp.add(String.format(OPERATION_URL_FORMAT, schema, host, tenant, "get"));
+            listOperationsUrlTmp.add(String.format(OPERATION_URL_FORMAT, schema, host, tenant, "list"));
+            doneUrlFormatTmp.add(String.format(DONE_URL_FORMAT, schema, host, tenant));
+        }
+        getOperationUrl = getOperationUrlTmp;
+        listOperationsUrl = listOperationsUrlTmp;
+        doneUrlFormat = doneUrlFormatTmp;
     }
 }

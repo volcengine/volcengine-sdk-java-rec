@@ -28,18 +28,19 @@ public class ByteairClientImpl extends CommonClientImpl implements ByteairClient
     }
 
     @Override
-    public void doRefresh(String host) {
-        this.byteairURL.refresh(host);
+    public void doRefresh(List<String> hosts) {
+        this.byteairURL.refresh(hosts);
     }
 
     @Override
     public WriteResponse writeData(List<Map<String, Object>> dataList, String topic,
-                                                     Option... opts) throws NetException, BizException {
+                                   Option... opts) throws NetException, BizException {
         if (Objects.nonNull(dataList) && dataList.size() > MAX_IMPORT_ITEM_COUNT) {
             throw new BizException(ERR_MSG_TOO_MANY_ITEMS);
         }
         Parser<WriteResponse> parser = WriteResponse.parser();
-        String urlFormat = byteairURL.getWriteDataUrlFormat();
+        int index = byteairURL.getRandom().nextInt(byteairURL.getWriteDataUrlFormat().size());
+        String urlFormat = byteairURL.getWriteDataUrlFormat().get(index);
         String url = urlFormat.replace("{}", topic);
         WriteResponse response = httpCaller.doJSONRequest(url, dataList, parser, Option.conv2Options(opts));
         log.debug("[volcengineSDK][WriteData] rsp:\n{}", response);
@@ -51,7 +52,8 @@ public class ByteairClientImpl extends CommonClientImpl implements ByteairClient
                                    Option... opts) throws NetException, BizException {
         Options options = Option.conv2Options(opts);
         String scene = getSceneFromOpts(options);
-        String url = byteairURL.getPredictUrlFormat().replace("{}", scene);
+        int index = byteairURL.getRandom().nextInt(byteairURL.getPredictUrlFormat().size());
+        String url = byteairURL.getPredictUrlFormat().get(index).replace("{}", scene);
         Parser<PredictResponse> parser = PredictResponse.parser();
         PredictResponse response = httpCaller.doPBRequest(url, request, parser, options);
         log.debug("[volcengineSDK][Predict] rsp:\n{}", response);
@@ -69,7 +71,8 @@ public class ByteairClientImpl extends CommonClientImpl implements ByteairClient
     public CallbackResponse callback(CallbackRequest request,
                                      Option... opts) throws NetException, BizException {
         Parser<CallbackResponse> parser = CallbackResponse.parser();
-        String url = byteairURL.getCallbackUrl();
+        int index = byteairURL.getRandom().nextInt(byteairURL.getCallbackUrl().size());
+        String url = byteairURL.getCallbackUrl().get(index);
         CallbackResponse response = httpCaller.doPBRequest(url, request, parser, Option.conv2Options(opts));
         log.debug("[volcengineSDK][Callback] rsp:\n{}", response);
         return response;
