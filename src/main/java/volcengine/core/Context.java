@@ -51,9 +51,9 @@ public class Context {
 
         private String token;
 
-        private String ak; // AccessKey of a volcengin tenant
+        private String ak; // AccessKey of a volcengine tenant
 
-        private String sk; // SecretKey of a volcengin tenant
+        private String sk; // SecretKey of a volcengine tenant
 
         private boolean useAirAuth;
 
