@@ -23,14 +23,16 @@ public final class Helper {
     //report success request
     public static void reportRequestSuccess(String metricsPrefix, String url, long begin) {
         String[] urlTag = buildUrlTags(url);
-        Latency(buildLatencyKey(metricsPrefix), begin, urlTag);
-        Counter(buildCountKey(metricsPrefix), 1, urlTag);
+        String[] tagKvs = appendBaseTags(urlTag);
+        Latency(buildLatencyKey(metricsPrefix), begin, tagKvs);
+        Counter(buildCountKey(metricsPrefix), 1, tagKvs);
     }
 
     //report fail request
     public static void reportRequestError(String metricsPrefix, String url, long begin, int code, String message) {
         String[] urlTag = buildUrlTags(url);
         String[] tagKvs = appendTags(urlTag, "code:" + code, "message:" + message);
+        tagKvs = appendBaseTags(tagKvs);
         Latency(buildLatencyKey(metricsPrefix), begin, tagKvs);
         Counter(buildCountKey(metricsPrefix), 1, tagKvs);
     }
@@ -38,6 +40,7 @@ public final class Helper {
     // report exception
     public static void reportRequestException(String metricsPrefix, String url, long begin, Throwable e) {
         String[] tagKvs = withExceptionTags(buildUrlTags(url), e);
+        tagKvs = appendBaseTags(tagKvs);
         Latency(buildLatencyKey(metricsPrefix), begin, tagKvs);
         Counter(buildCountKey(metricsPrefix), 1, tagKvs);
     }
@@ -61,7 +64,34 @@ public final class Helper {
 
 
     private static String[] buildUrlTags(String url) {
-        return new String[]{"url:" + adjustUrlTag(url), "req_type:" + parseReqType(url)};
+        if (url.contains("ping")) {
+            return new String[]{"url:" + adjustUrlTag(url), "req_type:ping"};
+        }
+        if (url.contains("data/api")) {
+            String tenant = parseTenant(url), scene = parseScene(url);
+            return new String[]{"url:" + adjustUrlTag(url), "req_type:data-api", "tenant:" + tenant, "scene:" + scene};
+        }
+        if (url.contains("predict/api")) {
+            String tenant = parseTenant(url), scene = parseScene(url);
+            return new String[]{"url:" + adjustUrlTag(url), "req_type:predict-api", "tenant:" + tenant, "scene:" + scene};
+        }
+        return new String[]{"url:" + adjustUrlTag(url), "req_type:unknown"};
+    }
+
+    private static String parseTenant(String url) {
+        String[] sp = url.split("\\?")[0].split("/");
+        if (sp.length < 2) {
+            return "";
+        }
+        return sp[sp.length - 2];
+    }
+
+    private static String parseScene(String url) {
+        String[] sp = url.split("\\?")[0].split("/");
+        if (sp.length < 2) {
+            return "";
+        }
+        return sp[sp.length - 1];
     }
 
     /**
@@ -105,5 +135,12 @@ public final class Helper {
 
     public static String buildLatencyKey(String metricsPrefix) {
         return metricsPrefix + "." + "latency";
+    }
+
+    public static String version = "1.2.0";
+
+    public static String[] appendBaseTags(String[] tags) {
+        String[] baseTags = new String[]{"language:java", "version:" + version};
+        return appendTags(tags, baseTags);
     }
 }
