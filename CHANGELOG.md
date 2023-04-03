@@ -1,4 +1,8 @@
-# [](https://code.byted.org/byteair/volcengine-sdk-java-rec/compare/v1.1.1...v) (2023-04-03)
+# [](https://code.byted.org/byteair/volcengine-sdk-java-rec/compare/v1.2.0...v) (2023-04-03)
+
+
+
+# [1.2.0](https://code.byted.org/byteair/volcengine-sdk-java-rec/compare/v1.1.1...v1.2.0) (2023-04-03)
 
 
 ### Features
