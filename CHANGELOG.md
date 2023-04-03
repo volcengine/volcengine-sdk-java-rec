@@ -1,8 +1,9 @@
-# [](https://code.byted.org/byteair/volcengine-sdk-java-rec/compare/v1.1.1...v) (2023-01-28)
+# [](https://code.byted.org/byteair/volcengine-sdk-java-rec/compare/v1.1.1...v) (2023-04-03)
 
 
 ### Features
 
+* add more tag in metrics ([90220a3](https://code.byted.org/byteair/volcengine-sdk-java-rec/commits/90220a399984b12fe96805d314cfae86a71242fc))
 * remove host avaliabler, use random lb strategy when .hosts() set several hosts ([a605887](https://code.byted.org/byteair/volcengine-sdk-java-rec/commits/a605887098d9bc2c25e19d0ec20aa64886944466))
 
 
