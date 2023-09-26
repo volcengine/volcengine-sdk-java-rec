@@ -1,4 +1,13 @@
-# [](/byteair/volcengine-sdk-java-rec/compare/v1.2.0...v) (2023-05-30)
+# [](/byteair/volcengine-sdk-java-rec/compare/v1.2.1...v) (2023-09-26)
+
+
+
+## [1.2.1](/byteair/volcengine-sdk-java-rec/compare/v1.2.0...v1.2.1) (2023-09-26)
+
+
+### Features
+
+* 流程规范处理 ([ec360fe](/byteair/volcengine-sdk-java-rec/commits/ec360fee5e36bb6ab1dac619b2cfaf1664598c84))
 
 
 
