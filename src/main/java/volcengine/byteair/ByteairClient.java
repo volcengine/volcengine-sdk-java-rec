@@ -12,8 +12,7 @@ import java.util.Map;
 public interface ByteairClient extends CommonClient {
     // Write
     //
-    // Writes at most 100 data at a time. Exceeding 100 in a request results in
-    // a rejection. One can use this to upload new data, or update existing
+    // One can use this to upload new data, or update existing
     // data (by providing all the fields, some data type not support update, e.g. user event).
     WriteResponse writeData(List<Map<String, Object>> dataList, String topic,
                             Option... opts) throws NetException, BizException;
