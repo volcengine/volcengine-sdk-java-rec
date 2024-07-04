@@ -28,12 +28,15 @@ public class MetricsCollector {
             "max", "min", "avg", "pct75", "pct90", "pct95", "pct99", "pct999"};
 
     public static void Init(MetricsOption... opts) {
-        metricsCfg = new MetricsCfg();
-        // apply options
+        MetricsCfg tmpCfg = new MetricsCfg();
         for (MetricsOption opt : opts) {
-            opt.fill((metricsCfg));
+            opt.fill((tmpCfg));
         }
-
+        if (tmpCfg.domain.isEmpty()) {
+            log.error("metrics domain is null");
+            return;
+        }
+        metricsCfg = tmpCfg;
         Map<MetricsType, Map<String, MetricValue>> metricsCollectorTmp = new HashMap<>();
         metricsCollectorTmp.put(MetricsType.metricsTypeStore, new HashMap<>());
         metricsCollectorTmp.put(MetricsType.metricsTypeCounter, new HashMap<>());
@@ -295,7 +298,6 @@ public class MetricsCollector {
         // build default metricsCfg
         public MetricsCfg() {
             this.setEnableMetrics(true);
-            this.setDomain(DEFAULT_METRICS_DOMAIN);
             this.setPrefix(DEFAULT_METRICS_PREFIX);
             this.setHttpSchema(DEFAULT_METRICS_HTTP_SCHEMA);
             this.setFlushIntervalMs(DEFAULT_FLUSH_INTERVAL_MS);

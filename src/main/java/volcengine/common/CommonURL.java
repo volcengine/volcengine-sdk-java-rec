@@ -11,23 +11,18 @@ import java.util.Random;
 @Getter
 public class CommonURL implements URLCenter {
     // The URL format of operation information
-    // Example: https://tob.sgsnssdk.com/data/api/retail/retail_demo/operation?method=get
     private final static String OPERATION_URL_FORMAT = "%s://%s/data/api/%s/operation?method=%s";
 
     // The URL format of done information
-    // Example: https://tob.sgsnssdk.com/data/api/retail/retail_demo/done?topic=user
     private final static String DONE_URL_FORMAT = "%s://%s/data/api/%s/done?topic={}";
 
     // The URL of getting operation information which is real-time
-    // Example: https://tob.sgsnssdk.com/data/api/retail_demo/operation?method=get
     private List<String> getOperationUrl;
 
     // The URL of query operations information which is non-real-time
-    // Example: https://tob.sgsnssdk.com/data/api/retail_demo/operation?method=list
     private List<String> listOperationsUrl;
 
     // The URL of mark certain days that data synchronization is complete
-    // Example: https://tob.sgsnssdk.com/data/api/retail_demo/done?topic=user
     private List<String> doneUrlFormat;
 
     protected String schema;
