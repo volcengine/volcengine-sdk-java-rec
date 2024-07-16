@@ -1,7 +1,6 @@
 package volcengine.byteair;
 
 import volcengine.core.Context;
-import volcengine.core.Region;
 
 import java.util.List;
 import java.util.Map;
@@ -40,11 +39,6 @@ public class ByteairClientBuilder {
 
     public ByteairClientBuilder headers(Map<String, String> headers) {
         this.param.setHeaders(headers);
-        return this;
-    }
-
-    public ByteairClientBuilder region(Region region) {
-        this.param.setRegion(region);
         return this;
     }
 

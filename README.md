@@ -1,6 +1,7 @@
 volcengine data/predict api sdk, java version
 <br><br>
 demo
+
 ```java
 import com.alibaba.fastjson.JSON;
 import volcengine.byteair.ByteairClient;
@@ -10,7 +11,6 @@ import volcengine.common.protocol.VolcengineCommon;
 import volcengine.core.BizException;
 import volcengine.core.NetException;
 import volcengine.core.Option;
-import volcengine.core.Region;
 import volcengine.core.metrics.MetricsCollector;
 
 import java.time.LocalDate;
@@ -26,16 +26,19 @@ public class Example {
                 .tenantId("xxx")
                 // 必传,项目id.
                 .applicationId("xxx")
-                // 必传,密钥AK,获取方式:【火山引擎控制台】->【个人信息】->【密钥管理】中获取.
+                // 必传,密钥AK.
                 .ak("xxx")
-                // 必传,密钥SK,获取方式：【火山引擎控制台】->【个人信息】->【密钥管理】中获取.
+                // 必传,密钥SK.
                 .sk("xxx")
-                // 必传,国内使用AIR_CN.
-                .region(Region.AIR_CN)
+                // 必传,域名.
+                .hosts(Collections.singletonList("xxx"))
                 // 进行构建client
                 .build();
         // metrics上报初始化.建议开启,方便火山侧排查问题.
-        MetricsCollector.Init();
+        MetricsCollector.Init(
+                // 域名同上
+                MetricsOption.withMetricsDomain("xxx")
+        );
     }
 
 

@@ -62,8 +62,6 @@ public class Context {
         private List<String> hosts;
 
         private Map<String, String> headers;
-
-        private Region region;
     }
 
     public Context(Param param) {
@@ -71,7 +69,7 @@ public class Context {
         this.tenant = param.tenant;
         this.tenantId = param.tenantId;
         this.token = param.token;
-        fillHosts(param);
+        this.hosts = param.hosts;
         fillVolcCredential(param);
 
         if (Objects.nonNull(param.schema)) {
@@ -90,8 +88,8 @@ public class Context {
         if (Objects.isNull(param.tenantId)) {
             throw new RuntimeException("tenant id is null");
         }
-        if (Objects.isNull(param.region)) {
-            throw new RuntimeException("region is null");
+        if (Objects.isNull(param.hosts)) {
+            throw new RuntimeException("hosts is null");
         }
         checkAuthRequiredField(param);
     }
@@ -111,30 +109,7 @@ public class Context {
         }
     }
 
-    private void fillHosts(Param param) {
-        if (Objects.nonNull(param.hosts) && !param.hosts.isEmpty()) {
-            this.hosts = param.hosts;
-            return;
-        }
-        if (param.region == Region.AIR_CN) {
-            hosts = Constant.AIR_CN_HOSTS;
-            return;
-        }
-        if (param.region == Region.AIR_SG) {
-            hosts = Constant.AIR_SG_HOSTS;
-            return;
-        }
-    }
-
     private void fillVolcCredential(Param param) {
-        String region = "";
-        switch (param.region) {
-            case AIR_SG:
-                region = "ap-singapore-1";
-                break;
-            default: //Region "CN" and "AIR_CN" belong to "cn-north-1"
-                region = "cn-north-1";
-        }
-        this.volcCredential = new Credential(param.ak, param.sk, VOLC_AUTH_SERVICE, region);
+        this.volcCredential = new Credential(param.ak, param.sk, VOLC_AUTH_SERVICE, "placeholder");
     }
 }

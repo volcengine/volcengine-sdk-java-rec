@@ -2,8 +2,6 @@ package volcengine.core.metrics;
 
 
 public class Constant {
-    // TODO 根据region自动选择DEFAULT_METRICS_DOMAIN
-    public static final String DEFAULT_METRICS_DOMAIN = "api.byteair.volces.com";
     public static final String DEFAULT_METRICS_PREFIX = "volcengine.rec.sdk";
     public static final String DEFAULT_METRICS_HTTP_SCHEMA = "https";
 

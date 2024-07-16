@@ -1,4 +1,13 @@
-# [](/byteair/volcengine-sdk-java-rec/compare/v1.2.1...v) (2023-09-26)
+# [](/byteair/volcengine-sdk-java-rec/compare/v1.2.2...v) (2024-07-16)
+
+
+
+## [1.2.2](/byteair/volcengine-sdk-java-rec/compare/v1.2.1...v1.2.2) (2024-07-04)
+
+
+### Features
+
+* 去除region参数 ([05e77ac](/byteair/volcengine-sdk-java-rec/commits/05e77ac626f8e5f54512ed9e64d063000d7f15a7))
 
 
 
