@@ -1,3 +1,7 @@
+## Security and privacy
+This project takes security seriously.
+For vulnerability reporting and supported versions, see [SECURITY.md](SECURITY.md)
+<br><br><br><br>
 volcengine data/predict api sdk, java version
 <br><br>
 demo
