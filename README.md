@@ -7,7 +7,7 @@ volcengine data/predict api sdk, java version
 demo
 
 ```java
-import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson2.JSON;
 import volcengine.byteair.ByteairClient;
 import volcengine.byteair.ByteairClientBuilder;
 import volcengine.byteair.protocol.VolcengineByteair;
